@@ -1,5 +1,5 @@
 theme = "hugo-theme-zdoc"
-baseURL = "http://example.org/"
+baseURL = "http://merrimanlab.github.io/howdoi/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "How Do I"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
