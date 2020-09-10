@@ -18,7 +18,8 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","blogdown"))'
       - name: install hugo
-        run: Rscript -e 'blogdown::install_hugo()'
+        run: Rscript -e 'blogdown::install_hugo(); blogdown::install_theme("zzossig/hugo-theme-zdoc")'
+
       - name: Render blog
         run: Rscript -e 'blogdown::build_site()'
       - uses: actions/upload-artifact@v1
