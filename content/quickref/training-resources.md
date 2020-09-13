@@ -1,5 +1,5 @@
 ---
-title: training-resources
+title: Training Resources
 author: Murray Cadzow
 date: '2020-09-14'
 slug: training-resources

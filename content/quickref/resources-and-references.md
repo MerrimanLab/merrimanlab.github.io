@@ -16,7 +16,7 @@ tocLevels:
 
 Include name, location on server, link to source and when downloaded/created
 
-# Summary
+## Summary
 
 Resource | Version | Created/Downloaded
 ---|---|---
@@ -26,13 +26,13 @@ dbSNP | 137 | tbc
 GATK Resource Bundle | b.37 | tbc
 1KGP Impute Panel | Phase3 | October 2014
 
-# Hosted shiny apps
+## Hosted shiny apps
 
 Name | URL
 ---|---
 Merriman GTEx eQTL browser | http://biochemcompute.otago.ac.nz:3838/mik-apps/QTLBrowser/
 
-# Web Resources
+## Web Resources
 
 Name | Genome Build | Website
 ---|---|---
@@ -62,11 +62,11 @@ GWAS Central | | www.gwascentral.org
 UK Biobank | | http://biobank.ctsu.ox.ac.uk/crystal/
 UK Biobank ICD explorer | | http://risteys.broadinstitute.org
 
-# 1000 Genomes Project
+## 1000 Genomes Project
 
 Phase 3 release from September 2014
 
-# Impute2 reference panel
+## Impute2 reference panel
 
 GRCh37 coordinates
 
@@ -74,7 +74,7 @@ GRCh37 coordinates
 
 https://mathgen.stats.ox.ac.uk/impute/1000GP_Phase3.html
 
-# Human Reference Sequence
+## Human Reference Sequence
 
 **GRCh37 Decoy reference**
 
@@ -84,13 +84,13 @@ url: ftp://ftp.1000genomes.ebi.ac.uk:21/vol1/ftp/technical/reference/phase2_refe
 
 Location: /Volumes/BiocArchive/merrimanlab/references/gatk/genome/hsd37.fa
 
-# dbSNP
+## dbSNP
 
 dbsnp135
 
 dbsnp137
 
-# GATK Resource Bundle
+## GATK Resource Bundle
 
 Crucial resource for running the GATK.
 
@@ -98,7 +98,7 @@ More information: http://gatkforums.broadinstitute.org/discussion/1213/whats-in-
 
 Location: /Volumes/BiocArchive/merrimanlab/references/gatk/bundle
 
-# Ancestral allele
+## Ancestral allele
 
 Downloaded 6 Aug 2014
 
