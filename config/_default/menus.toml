@@ -1,0 +1,17 @@
+[[main]]
+  identifier = "docs"
+  name = "Docs"
+  url = "docs"
+  weight = 1
+
+[[main]]
+  identifier = "quickref"
+  name = "QuickRef"
+  url = "quickref"
+  weight = 2
+
+[[main]]
+  identifier = "post"
+  name = "Posts"
+  url = "post"
+  weight = 2

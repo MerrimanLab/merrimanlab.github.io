@@ -1,11 +1,7 @@
 baseURL = "https://merrimanlab.github.io/howdoi/"
-title = "Hugo Zdoc Theme"
+title = "MerrimanLab"
 theme = "hugo-theme-zdoc"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-hasCJKLanguage = false
 
 copyright = "&copy;{year}, All Rights Reserved"
 timeout = 10000
@@ -42,6 +38,12 @@ disableKinds = ["taxonomyTerm"]
     baseName = "index"
     isPlainText = true
     notAlternative = true
+
+[params]
+
+[[params.landing]]
+    landingTitle = "adhfalksdhfklas"
+    landingText = "afdhasldkjflakjdfaljdf"
 
 [taxonomies]
   tag = "tags"

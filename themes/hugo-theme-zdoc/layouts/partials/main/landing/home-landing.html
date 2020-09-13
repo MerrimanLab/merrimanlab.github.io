@@ -5,7 +5,7 @@
     {{ with .backgroundImage }}
       <div style="background-image: url('{{ .src | relURL }}'); background-position: center; background-repeat: no-repeat; background-size: cover; position: absolute; top: -50px; left: 0; width: 100%; height: {{ .height }}px;"></div>
     {{ end }}
-    <div class="home__landing" style="height: {{ .height }}px;">
+    <div class="home__landing" style="text-align:center;height: {{ .height }}px;">
       {{ if .image }}
         <div class="home__landing--img">
           <img src="{{ .image | relURL }}" alt="Site Landing Page image">
@@ -23,7 +23,7 @@
             {{ end }}
           {{ if .text }}
             {{ range .text }}
-              <div class="text" style="{{ with $landing.textColor }}color:{{ . }}{{ end }};">
+              <div class="text" style="text-align:center;margin-bottom:50px;{{ with $landing.textColor }}color:{{ . }}{{ end }};">
                 {{ . }}
               </div>
             {{ end }}
@@ -41,7 +41,7 @@
         <div class="home__landing--txt">
           {{ if .title }}
             {{ range .title }}
-            <div class="title" style="{{ with $landing.titleColor }}color:{{ . }}{{ end }};">
+            <div class="title" style="{{ with $landing.titleColor }}color:{{ . }}{{ end }};text-align=center">
               {{ . }}
             </div>
             {{ end }}
@@ -51,12 +51,11 @@
             {{ end }}
           {{ if .text }}
             {{ range .text }}
-              <div class="text" style="{{ with $landing.textColor }}color:{{ . }}{{ end }};">
+              <div class="text" style="text-align=center;margin-bottom:50px;{{ with $landing.textColor }}color:{{ . }}{{ end }};">
                 {{ . }}
               </div>
             {{ end }}
           {{ end }}
-        </div>
         <div class="flexcolumn">
           {{ range .buttons }}
             <a href="{{ .link }}" target="{{ if in .link "http" }}_blank{{ else }}_self{{ end }}" rel="noreferrer" class="home__landing--link">
@@ -66,6 +65,7 @@
             </a>
           {{ end }}
         </div>
+      </div>
       {{ end }}
     </div>
   </div>
