@@ -23,18 +23,25 @@ Professor Tony Merriman:
 ## Staff members
 
 - Marilyn Merriman
-- [Mandy Phipps-Green](https://github.com/mandyphippsgreen)
-- [Ruth Topless](https://github.com/ruthtopless)
-- [Riku Takei](https://github.com/rikutakei)
-- [Dr Murray Cadzow](https://github.com/murraycadzow)
+- [Mandy Phipps-Green]()
+  - [Github](https://github.com/mandyphippsgreen)
+- [Ruth Topless]()
+  - [Github](https://github.com/ruthtopless)
+- [Riku Takei]()
+  - [Github](https://github.com/rikutakei)
+- [Dr Murray Cadzow](https://www.otago.ac.nz/healthsciences/expertise/profile/index.html?id=3137)
+  - [Github](https://github.com/murraycadzow)
 - Ashley Frewen
 
 
 ## Research Fellows
 
-- Dr Megan Leask
-- [Dr Tanya Major](https://github.com/geeketics)
-- [Dr Anna Gosling](https://github.com/anna-gosling)
+- [Dr Megan Leask](https://www.otago.ac.nz/biochemistry/people/profile/index.html?id=2087)
+  - Github
+- [Dr Tanya Major](https://www.otago.ac.nz/biochemistry/people/profile/index.html?id=2639)
+  - [Github](https://github.com/geeketics)
+- [Dr Anna Gosling](https://www.otago.ac.nz/bms/expertise/profile/index.html?id=2947)
+  - [Github](https://github.com/anna-gosling)
 
 
 
@@ -56,5 +63,8 @@ Professor Tony Merriman:
 
 - Matt Bixley (Staff)
 - Edana Lord (Staff)
+- Callum Tanner (Staff)
 - James Boocock (MSc student)
 - Hakimeh Azimi (MSc student)
+- Tahzeeb Fatima Awais (PhD student)
+- Humaira Rasheed (Phd Student)
