@@ -1,3 +1,3 @@
 # howdoi
 
-![deployblog](https://github.com/MerrimanLab/howdoi/workflows/deployblog/badge.svg?branch=master)
+![deployblog](https://github.com/MerrimanLab/merrimanlab.github.io/workflows/deployblog/badge.svg?branch=master)
