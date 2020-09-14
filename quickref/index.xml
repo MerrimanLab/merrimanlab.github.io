@@ -15,6 +15,28 @@
     
       
       <item>
+        <title>Data Formats</title>
+        <link>https://merrimanlab.github.io/quickref/data-formats/</link>
+        <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/quickref/data-formats/</guid>
+        <description>VCF Specification
+https://vcftools.github.io/specs.html
+PLINK PED/MAP or BED/BIM/FAM
+Specification
+https://www.cog-genomics.org/plink2/formats#bed
+http://pngu.mgh.harvard.edu/~purcell/plink/data.shtml#ped
+SAM/BAM Specification
+https://samtools.github.io/hts-specs/
+BED and GTF/GFF Specification
+BED http://asia.ensembl.org/info/website/upload/bed.html
+GTF/GFF http://asia.ensembl.org/info/website/upload/gff.html
+FASTA/FASTQ Specification
+FASTA https://en.wikipedia.org/wiki/FASTA_format
+FASTQ https://en.wikipedia.org/wiki/FASTQ_format</description>
+      </item>
+      
+      <item>
         <title>Reference Resources</title>
         <link>https://merrimanlab.github.io/quickref/reference-resources/</link>
         <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
