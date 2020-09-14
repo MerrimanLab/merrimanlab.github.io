@@ -39,11 +39,5 @@ disableKinds = ["taxonomyTerm"]
     isPlainText = true
     notAlternative = true
 
-[params]
-
-[[params.landing]]
-    landingTitle = "adhfalksdhfklas"
-    landingText = "afdhasldkjflakjdfaljdf"
-
 [taxonomies]
   tag = "tags"

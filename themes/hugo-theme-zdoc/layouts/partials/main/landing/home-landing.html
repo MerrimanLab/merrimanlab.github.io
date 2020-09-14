@@ -13,7 +13,7 @@
         <div class="home__landing--txt">
           {{ if .title }}
             {{ range .title }}
-              <div class="title" style="{{ with $landing.titleColor }}color:{{ . }}{{ end }};">
+              <div class="title" style="margin-top:150px;{{ with $landing.titleColor }}color:{{ . }}{{ end }};">
                 {{ . }}
               </div>
             {{ end }}
@@ -41,7 +41,7 @@
         <div class="home__landing--txt">
           {{ if .title }}
             {{ range .title }}
-            <div class="title" style="{{ with $landing.titleColor }}color:{{ . }}{{ end }};text-align=center">
+            <div class="title" style="margin-top:150px;{{ with $landing.titleColor }}color:{{ . }}{{ end }};text-align=center">
               {{ . }}
             </div>
             {{ end }}
