@@ -57,6 +57,15 @@ Enjoy!
       </item>
       
       <item>
+        <title>Genome Studio QC</title>
+        <link>https://merrimanlab.github.io/docs/genome-studio-qc/</link>
+        <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/genome-studio-qc/</guid>
+        <description>This guide provides a comprehensive set of steps for the manual curation of genotype calls within Genome Studio. Genome Studio&amp;rsquo;s automatic clustering algorithms are reported to be accurate for ~ 99 % of SNPs. The other ~ 1 % need to be manually reviewed. This guide offers a consistent and logical approach and is aimed at reducing the workload where possible. The steps here are a combination of those published by Guo et al.</description>
+      </item>
+      
+      <item>
         <title>Hello R Markdown</title>
         <link>https://merrimanlab.github.io/docs/eqtl/2015-07-23-r-rmarkdown/</link>
         <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
