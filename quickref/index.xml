@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quick Reference on MerrimanLab</title>
+    <title>Quickrefs on MerrimanLab</title>
     <link>https://merrimanlab.github.io/quickref/</link>
-    <description>Recent content in Quick Reference on MerrimanLab</description>
+    <description>Recent content in Quickrefs on MerrimanLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 26 Jan 2020 04:15:05 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://merrimanlab.github.io/quickref/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,7 @@
         
         <guid>https://merrimanlab.github.io/quickref/reference-resources/</guid>
         <description>Include name, location on server, link to source and when downloaded/created
-Summary    Resource Version Created/Downloaded     1000 Genomes Project Phase3 September 2014   Human Reference Sequence GRCh37 (build 37/hg19) tbc   dbSNP 137 tbc   GATK Resource Bundle b.37 tbc   1KGP Impute Panel Phase3 October 2014    Hosted shiny apps    Name URL     Merriman GTEx eQTL browser http://biochemcompute.</description>
+Summary    Resource Version Created/Downloaded     1000 Genomes Project Phase3 September 2014/March 2017   Human Reference Sequence GRCh37 (build 37/hg19) tbc   dbSNP 137 tbc   GATK Resource Bundle b.37 tbc   1KGP Impute Panel Phase3 October 2014    Hosted shiny apps    Name URL     Merriman GTEx eQTL browser http://biochemcompute.</description>
       </item>
       
       <item>
@@ -31,26 +31,8 @@ Summary    Resource Version Created/Downloaded     1000 Genomes Project Phase3 S
         
         <guid>https://merrimanlab.github.io/quickref/training-resources/</guid>
         <description>Current training resources for the lab
-Intro:
-Software Capentry
- Shell R Git/Github  Data Analysis:
-Data Carpentry
- Data analysis and visualisation in R Best practice spreadsheets for use later in R  Merriman Lab R tutorial
- Intro lesson Stats lesson Programming lesson ggplot2 lesson  Additional:
-R
- dplyr ggplot2 RMySQL Rmarkdown  ssh
-computer storage
-databases
- SNPmax SQL  using statistics</description>
-      </item>
-      
-      <item>
-        <title>new</title>
-        <link>https://merrimanlab.github.io/quickref/new/</link>
-        <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://merrimanlab.github.io/quickref/new/</guid>
-        <description>hello</description>
+Novice/Intro: The Carpentries Software Capentry  Shell R Git/Github SQL  Data Carpentry  Data analysis and visualisation in R Best practice spreadsheets for use later in R  Custom made Merriman Lab R tutorial
+ Intro lesson Stats lesson Programming lesson ggplot2 lesson  Additional: R  dplyr ggplot2 RMySQL Rmarkdown  </description>
       </item>
       
     

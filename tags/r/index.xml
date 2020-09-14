@@ -21,17 +21,8 @@
         
         <guid>https://merrimanlab.github.io/quickref/training-resources/</guid>
         <description>Current training resources for the lab
-Intro:
-Software Capentry
- Shell R Git/Github  Data Analysis:
-Data Carpentry
- Data analysis and visualisation in R Best practice spreadsheets for use later in R  Merriman Lab R tutorial
- Intro lesson Stats lesson Programming lesson ggplot2 lesson  Additional:
-R
- dplyr ggplot2 RMySQL Rmarkdown  ssh
-computer storage
-databases
- SNPmax SQL  using statistics</description>
+Novice/Intro: The Carpentries Software Capentry  Shell R Git/Github SQL  Data Carpentry  Data analysis and visualisation in R Best practice spreadsheets for use later in R  Custom made Merriman Lab R tutorial
+ Intro lesson Stats lesson Programming lesson ggplot2 lesson  Additional: R  dplyr ggplot2 RMySQL Rmarkdown  </description>
       </item>
       
     
