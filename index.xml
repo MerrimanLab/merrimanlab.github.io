@@ -66,6 +66,15 @@ Enjoy!
       </item>
       
       <item>
+        <title>new</title>
+        <link>https://merrimanlab.github.io/quickref/new/</link>
+        <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/quickref/new/</guid>
+        <description>hello</description>
+      </item>
+      
+      <item>
         <title>Hello R Markdown</title>
         <link>https://merrimanlab.github.io/docs/eqtl/2015-07-23-r-rmarkdown/</link>
         <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
