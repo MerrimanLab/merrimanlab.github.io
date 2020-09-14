@@ -3,7 +3,7 @@ title: Reference Resources
 author: Murray Cadzow
 date: '2020-09-14'
 slug: reference-resources
-categories: []
+categories: ["reference"]
 tags: []
 weight: 0
 enableToc: yes
