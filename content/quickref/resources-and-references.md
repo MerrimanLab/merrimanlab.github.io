@@ -20,7 +20,7 @@ Include name, location on server, link to source and when downloaded/created
 
 Resource | Version | Created/Downloaded
 ---|---|---
-1000 Genomes Project | Phase3 | September 2014
+1000 Genomes Project | Phase3 | September 2014/March 2017
 Human Reference Sequence | GRCh37 (build 37/hg19) | tbc
 dbSNP | 137 | tbc
 GATK Resource Bundle | b.37 | tbc
@@ -64,13 +64,15 @@ UK Biobank ICD explorer | | http://risteys.broadinstitute.org
 
 ## 1000 Genomes Project
 
-Phase 3 release from September 2014
+Phase 3 release from September 2014 location: `/Volumes/archive/merrimanlab/reference_files/VCF/1000Genomes_vcf_files/Phase3_Sept2014`
+
+Phase 3 release from March 2017 location:  `/Volumes/archive/merrimanlab/reference_files/VCF/1000Genomes_vcf_files/Phase3_March2017`
+
+Both are in GRCh37 coordinates.
 
 ## Impute2 reference panel
 
 GRCh37 coordinates
-
-
 
 https://mathgen.stats.ox.ac.uk/impute/1000GP_Phase3.html
 
@@ -82,13 +84,17 @@ Downloaded 5 Aug 2014
 
 url: ftp://ftp.1000genomes.ebi.ac.uk:21/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz
 
-Location: /Volumes/BiocArchive/merrimanlab/references/gatk/genome/hsd37.fa
+Location: /Volumes/archive/merrimanlab/reference_files/FASTA/hs37d5/hsd37d5.fa
 
 ## dbSNP
 
-dbsnp135
 
-dbsnp137
+
+dbSNP 151 is available in both GRCh37 and GRCh38 genome builds as a vcf at `/Volumes/archive/merrimanlab/reference_files/VCF/dbSNP_reference/dbsnp151/`
+
+GRCh37 is from 2018-04-23
+
+GRCh38/Hg38 is from 2018-04-18 
 
 ## GATK Resource Bundle
 
@@ -96,7 +102,7 @@ Crucial resource for running the GATK.
 
 More information: http://gatkforums.broadinstitute.org/discussion/1213/whats-in-the-resource-bundle-and-how-can-i-get-it
 
-Location: /Volumes/BiocArchive/merrimanlab/references/gatk/bundle
+
 
 ## Ancestral allele
 
@@ -104,4 +110,4 @@ Downloaded 6 Aug 2014
 
 url: ftp://ftp.ensembl.org/pub/release-66/fasta/ancestral_alleles/homo_sapiens_ancestor_GRCh37_e66.tar.bz
 
-/Volumes/BiocArchive/archive/merrimanlab/reference_files/Ancestral_Alleles/homo_sapiens_ancestor_GRCh37_e65/
+/Volumes/archive/merrimanlab/reference_files/Ancestral_Alleles/homo_sapiens_ancestor_GRCh37_e65/
