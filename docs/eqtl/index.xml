@@ -15,26 +15,14 @@
     
       
       <item>
-        <title>It&#39;s alive!</title>
-        <link>https://merrimanlab.github.io/docs/eqtl/it-s-alive/</link>
-        <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+        <title>cis-eQTL</title>
+        <link>https://merrimanlab.github.io/docs/eqtl/cis-eqtl/</link>
+        <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://merrimanlab.github.io/docs/eqtl/it-s-alive/</guid>
-        <description> Hello Thanks to Riku there is now going to be a place to collect together a series of How-Tos and other tid-bits of knowledge that will be useful for people in the lab.
- Future Once enough posts have been create Riku has also volunteered to be editor of bookdown version of the posts.
-Enjoy!
- </description>
-      </item>
-      
-      <item>
-        <title>Hello R Markdown</title>
-        <link>https://merrimanlab.github.io/docs/eqtl/2015-07-23-r-rmarkdown/</link>
-        <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-        
-        <guid>https://merrimanlab.github.io/docs/eqtl/2015-07-23-r-rmarkdown/</guid>
-        <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+        <guid>https://merrimanlab.github.io/docs/eqtl/cis-eqtl/</guid>
+        <description>Repo: https://github.com/MerrimanLab/QTL_pipelines
+This pipeline runs a co-localisation analysis using a list of key SNPs, a GWAS results file, and the GTEx dataset.
+bash cis_eqtl_pipeline.sh my_gwas.txt my_snplist.txt 1000000 </description>
       </item>
       
     
