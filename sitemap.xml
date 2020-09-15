@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://merrimanlab.github.io/docs/getting_started/</loc>
+    <lastmod>2020-09-14T14:27:04+12:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/docs/eqtl/</loc>
     <lastmod>2020-01-28T00:36:39+09:00</lastmod>
   </url>

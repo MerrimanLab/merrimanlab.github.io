@@ -15,6 +15,18 @@
     
       
       <item>
+        <title>Getting Started</title>
+        <link>https://merrimanlab.github.io/docs/getting_started/</link>
+        <pubDate>Mon, 14 Sep 2020 14:27:04 +1200</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/getting_started/</guid>
+        <description>So you want to do some analyses, but don&amp;rsquo;t know where to start You have come to the right place!!
+From a guide on how to run programs, to little tips and tricks to make your life easier, you will find it on this website.
+For brand new lab members If you are brand new to this lab, read this page from top to bottom.
+If you only want to know about a specific topic, you can search for things in the search bar at the top right hand corner, or alterntaively, you can look through each tab/section of this web site to find the right thing.</description>
+      </item>
+      
+      <item>
         <title>eQTL Pipeline</title>
         <link>https://merrimanlab.github.io/docs/eqtl/</link>
         <pubDate>Tue, 28 Jan 2020 00:36:39 +0900</pubDate>
