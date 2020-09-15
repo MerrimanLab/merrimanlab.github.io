@@ -11,7 +11,7 @@ landing:
   textColor:
   spaceBetweenTitleText: 25
   buttons:
-    - link: docs/gettingstarted/quickstart
+    - link: docs/getting_started
       text: GET STARTED
       color: primary
 ---
