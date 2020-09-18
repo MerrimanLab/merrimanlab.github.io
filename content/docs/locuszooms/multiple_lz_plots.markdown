@@ -1,0 +1,158 @@
+---
+title: "Generate multiple LZ plots"
+date: 09-18-2020
+draft: false
+weight: 3
+enableToc: true
+tocLevels:
+  - h2
+  - h3
+  - h4
+output:
+  md_document:
+    variant: markdown_github
+    preserve_yaml: true
+    pandoc_args: ["--wrap=none"]
+---
+
+# Make multiple Locus Zoom plots
+
+This is a general guide and recommendation on how to make multiple Locus Zooms.
+
+## Loop the locus.zoom() call
+
+Probably the best way to make multiple Locus Zoom plots is to loop the function call to `locus.zoom()`.
+
+Inputs that change between different Locus Zoom plots are:
+- SNP of interest/Gene of interest/Region of interest
+- LD information of the region
+
+Since the LD can be calculated on-the-fly, if you have a vector of SNPs/genes/regions of interest, you will be able to create a simple loop like so:
+
+
+```r
+variants = c("rs1121980", "rs8060235")
+output_filenames = paste(variants, ".jpg", sep = '')
+
+for(i in 1:length(variants)) {
+	locus.zoom(data = Example.assoc.linear,
+			   snp = variants[i],
+			   offset_bp = 500000,
+			   genes.data = UCSC_GRCh37_Genes_UniqueList.txt,
+			   plot.title = "Association of FTO with BMI in Europeans",
+			   file.name = output_filenames[i],
+			   secondary.snp = variants,
+			   secondary.label = TRUE,
+			   ignore.lead = TRUE)
+}
+```
+
+Note here that the `secondary.snp` option has been set to the vector of variants of interest, and the `ignore.lead` option has been enabled. By passing the vector of interest to the `secondary.snp` option, it allows `locus.zoom()` to plot any SNPs of interest within the region of the plot, as well as the SNPs you are interested in.
+
+In order to make sure the SNP of interest is colored correctly based on its LD, the `ignore.lead` option has been set. If this option wasn't set, then the LD information of the top SNP in that region would always be used instead of the LD information of the SNP of interest that you wanted.
+
+
+For regions of interest, we recommend you put the regions into a data frame with the following columns and pass each row to the function with a similar loop as above:
+
+Options  | Description              |
+-------- | ------------             |
+`chr`    | Chromosome               |
+`start`  | Start position of region |
+`end`    | End position of region   |
+
+
+## LD calculation -- on-the-fly, or pre-calculated?
+
+One thing to consider when generating multiple Locus Zoom plots is how you want to pass the LD information to the function.
+
+In most cases, on-the-fly LD calculation will work. However, when your SNP of interest is not present in the reference data, there is no way to calculate the LD between the SNP of interest with all other variants in the region.
+
+Potential work around for this are:
+1. Use a different reference data for LD calculation
+1. Use a different (surrogate) marker's LD information
+
+Either way, unless you edit the `locus.zoom()` function yourself, you will have to calculate your own LD in order to work around this problem.
+
+## Manually including LD information
+
+One method is to generate the LDs of all of the SNPs of interest beforehand, load it all into a `list`, and loop through this list together with the `locus.zoom()` function.
+
+### Calculate LD information
+
+The following code will generate LD for all the variants from a `plink` loci file in parallel:
+
+
+```bash
+#! /bin/bash
+
+# Script to generate LD of all the lead variants from plink loci output
+# Usage: bash /path/to/script plink.loci EUR ld_files
+
+LOCI=$1
+ANCESTRY=$2
+OUTPUT=$3
+
+mkdir -p ${OUTPUT}/ld/${ANCESTRY}
+
+grep -v "^$" ${LOCI} | tr -s ' ' '\t' | sed -e 's/^\t//g' -e 's/^23/X/g' | cut -f1,3,4 | awk 'NR > 1 {print $2, $1":"$3 - 500000"-"$3 + 500000}' | tr ' ' '\t' > ${LOCI}.query
+
+# Function to generate LD for each lead variant:
+run_ld() {
+	line=$1
+	ancestry=$2
+	prefix=$(echo ${ancestry}_ | sed 's/LAT/AMR/g' | sed 's/TAMA_/AFR_AMR_EAS_EUR_/g')
+	rsid=$(echo ${line} | cut -d ' ' -f1 )
+	query=$(echo ${line} | cut -d ' ' -f2)
+	chr=$(echo ${query} | cut -d ':' -f1)
+	bcftools view -r ${query} /Volumes/archive/merrimanlab/reference_files/VCF/1000Genomes_vcf_files/Phase3_March2017/${ancestry}/${prefix}chr${chr}.*biallelic.vcf.gz -Oz -o ${OUTPUT}/ld/${ancestry}/${rsid}.vcf.gz
+	plink1.9b4.9 --vcf ${OUTPUT}/ld/${ancestry}/${rsid}.vcf.gz --allow-no-sex --snps-only --r2 inter-chr --ld-snp ${rsid} --ld-window-r2 0 --out ${OUTPUT}/ld/${ancestry}/${rsid}
+}
+
+export -f run_ld
+cat ${LOCI}.query | parallel run_ld {} ${ANCESTRY}
+```
+
+First four columns of `plink` loci file are:
+
+| Column name   | Description                                    |
+| :------------ | ---------------------------------------------- |
+| `CHR`         | Chromosome                                     |
+| `F`           | File number (ignored in the script)            |
+| `SNP`         | rsID                                           |
+| `BP`          | Base position of the SNP                       |
+
+This file doesn't have to come directly from `plink` -- you can make your own loci file and pass it to the above script to generate your own LD.
+
+
+
+### Modify the loop
+
+Modify the loop as below:
+
+
+```r
+variants = c("rs1121980", "rs8060235")
+
+# Import LD info of the variants (you may want to re-write this in purrr, if you want to):
+ld_files = paste('path/to/ld/ancestry/', variants, sep = '')
+ld_files = paste(ld_files, '.ld', sep = '')
+ld_list = lapply(ld_files, function(x) read.table(x, stringsAsFactors = F, header = T))
+
+output_filenames = paste(variants, ".jpg", sep = '')
+
+for(i in 1:length(variants)) {
+	locus.zoom(data = Example.assoc.linear,
+			   snp = variants[i],
+			   ld.file = ld_list[[i]],
+			   offset_bp = 500000,
+			   genes.data = UCSC_GRCh37_Genes_UniqueList.txt,
+			   plot.title = "Association of FTO with BMI in Europeans",
+			   file.name = output_filenames[i],
+			   secondary.snp = variants,
+			   secondary.label = TRUE,
+			   ignore.lead = TRUE)
+}
+```
+
+Now, the above code assumes the LD files are named `<rsid>.ld`, so if you have made a different LD using a surrogate SNP, then rename the surrogate SNP LD file so it matches up with the rsID of the SNP of interest.
+

@@ -1,0 +1,140 @@
+---
+title: "How to generate LZ plot"
+date: 09-18-2020
+draft: false
+weight: 2
+output:
+  rmarkdown::html_document:
+    keep_md: true
+  blogdown::html_page:
+    keep_md: true
+  bookdown::html_document2:
+    keep_md: true
+  md_document:
+    variant: markdown_github
+    preserve_yaml: true
+    pandoc_args: ["--wrap=none"]
+---
+
+
+
+<div id="make-locus-zoom-like-plots-with-your-own-ld-matrix" class="section level1">
+<h1>Make Locus Zoom-like plots with your own LD matrix</h1>
+<p>This script creates an R function to create regional Manhattan plots with points coloured according to LD and genes annotated beneath.</p>
+<div id="input-file-format" class="section level2">
+<h2>Input file format</h2>
+<p>You will need at least two files to generate a Locus Zoom (LZ) plot: GWAS summary stats file, and a “gene” file.</p>
+<!-- TODO: need to link "access" to a quickref that points to where the data is -->
+<p>The LD file can be generated <a href="/docs/locuszooms/how_is_ld_calculated">on the fly</a>, as long as you have access to the 1000GP reference data and the correct tools to calculate the LD (see <a href="/docs/locuszooms/before_you_begin">Before you begin</a>).</p>
+<div id="gwas-summary-statistics" class="section level3">
+<h3>GWAS summary statistics</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CHR</td>
+<td align="left">Chromosome number of the variant</td>
+</tr>
+<tr class="even">
+<td align="left">SNP</td>
+<td align="left">rsID of the variant</td>
+</tr>
+<tr class="odd">
+<td align="left">BP</td>
+<td align="left">Base position of the variant (in GRCh37/hg19)</td>
+</tr>
+<tr class="even">
+<td align="left">P</td>
+<td align="left">P-value of the variant</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column_name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CHR</td>
+<td>Chromosome number of the variant</td>
+</tr>
+<tr class="even">
+<td align="left">SNP</td>
+<td>rsID of the variant</td>
+</tr>
+<tr class="odd">
+<td align="left">BP</td>
+<td>Base position of the variant (in GRCh37/hg19)</td>
+</tr>
+<tr class="even">
+<td align="left">P</td>
+<td>P-value of the variant</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="gene-file" class="section level3">
+<h3>Gene file</h3>
+</div>
+<div id="ld-file" class="section level3">
+<h3>LD file</h3>
+<p>Three example input files are included for test purposes, along with an example .jpg output:</p>
+<ul>
+<li>Example.assoc.linear: A file of PLINK association results (only the “CHR”, “SNP”, “BP”, and “P” columns are essential)</li>
+<li>Example.ld: A file of the LD between the SNP to be labelled (top-hit / SNP of interest) and the SNPs included in the PLINK results file
+<ul>
+<li>this file MUST have a column called “SNP_B” (containing a list of all the SNPs in the results file) and a column called “R2” (containing the R^2 LD value of each SNP). The SNP names MUST match the names in the SNP column of the results file.</li>
+<li>this file can be created for you by the locus_zoom.R script IF you have access to the Biochem servers and have rsIDs in your results file, if you are running this script on your local machine you will also need to ensure bcftools and plink2 are installed</li>
+</ul></li>
+<li>Example.genes: A file of the genes within the region for use in the annotation step. This file must have 4 columns, “Gene”, “Chrom”, “Start”, “End”. The UCSC_GRCh37_Genes_UniqueList.txt file can be used as this file.</li>
+</ul>
+</div>
+<div id="example-locus.zoom-run" class="section level3">
+<h3>Example locus.zoom run:</h3>
+<pre><code># load necessary files into R
+Example.assoc.linear &lt;- read.delim(&quot;Example.assoc.linear&quot;, stringsAsFactors = FALSE, header = TRUE)
+Example.ld &lt;- read.table(&quot;Example.ld&quot;, stringsAsFactors = FALSE, header = TRUE)
+UCSC_GRCh37_Genes_UniqueList.txt &lt;- read.delim(&quot;UCSC_GRCh37_Genes_UniqueList.txt&quot;, stringsAsFactors = FALSE, header = TRUE)
+
+# load the locuszoom function into R
+source(&quot;functions/locus_zoom.R&quot;)
+
+# create a LocusZoom-like plot
+locus.zoom(data = Example.assoc.linear,                                    # a data.frame (or a list of data.frames) with the columns CHR, BP, SNP, and P
+           region = c(16, 53340000, 54550000),                             # the chromosome region to be included in the plot
+           offset_bp = 0,                                                  # how many basepairs around the SNP / gene / region of interest to plot
+           ld.file = Example.ld,                                           # a file with LD values relevant to the SNP specified above
+           genes.data = UCSC_GRCh37_Genes_UniqueList.txt,                  # a file of all the genes in the region / genome
+           plot.title = &quot;Association of FTO with BMI in Europeans&quot;,        # the plot title
+           file.name = &quot;Example.jpg&quot;,                                      # the name of the file to save the plot to
+           secondary.snp = c(&quot;rs1121980&quot;, &quot;rs8060235&quot;),                    # a list of SNPs to label on the plot
+           secondary.label = TRUE)                                         # TRUE/FALSE whether to add rsIDs of secondary SNPs to plot</code></pre>
+</div>
+</div>
+</div>
+<div id="section" class="section level1">
+<h1><img src="Example.jpg" /></h1>
+<div id="secondary-example" class="section level2">
+<h2>Secondary Example:</h2>
+<p><em>This is not reproducible from the example data.</em></p>
+<pre><code>locus.zoom(data = EUR_meta_full1_clean_rsid.nfiltered_chr7,
+           gene = &quot;MLXIPL&quot;,
+           offset_bp = 500000,
+           genes.data = UCSC_GRCh37_Genes_UniqueList,
+           plot.title = &quot;Association of MLXIPL with gout in Europeans&quot;,
+           file.name = &quot;alternateExample.jpg&quot;,
+           genes.pvalue = European_GWAS_2020_test.genes_named,
+           colour.genes = TRUE)</code></pre>
+</div>
+</div>
+<div id="section-1" class="section level1">
+<h1><img src="alternateExample.jpg" /></h1>
+</div>
