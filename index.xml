@@ -27,6 +27,41 @@ If you only want to know about a specific topic, you can search for things in th
       </item>
       
       <item>
+        <title>Before You Begin</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/before_you_begin/</link>
+        <pubDate>Tue, 28 Jan 2020 00:36:39 +0900</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/before_you_begin/</guid>
+        <description>Requirements and prerequisites Here is a list of requirements that you will need in order to run this tool (relatively) smoothly.
+If you have access to the Department of Biochemistry server, you should have little to no problems to meet these requrirements.
+Software You will need the following software to run this tool:
+ Latest version of R Locus Zoom code from GitHub bcftools plink version 1.90 or later  Data You will need the following data to run this tool:</description>
+      </item>
+      
+      <item>
+        <title>How to generate LZ plot</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</guid>
+        <description>Make Locus Zoom-like plots with your own LD matrix This script creates an R function to create regional Manhattan plots with points coloured according to LD and genes annotated beneath.
+Input file format You will need at least two files to generate a Locus Zoom (LZ) plot: GWAS summary stats file, and a &amp;ldquo;gene&amp;rdquo; file.
+The LD file can be generated on the fly, as long as you have access to the 1000GP reference data and the correct tools to calculate the LD (see Before you begin).</description>
+      </item>
+      
+      <item>
+        <title>Generate multiple LZ plots</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/</guid>
+        <description>Make multiple Locus Zoom plots This is a general guide and recommendation on how to make multiple Locus Zooms.
+Loop the locus.zoom() call Probably the best way to make multiple Locus Zoom plots is to loop the function call to locus.zoom().
+Inputs that change between different Locus Zoom plots are:
+ SNP of interest/Gene of interest/Region of interest LD information of the region  Since the LD can be calculated on-the-fly, if you have a vector of SNPs/genes/regions of interest, you will be able to create a simple loop like so:</description>
+      </item>
+      
+      <item>
         <title>cis-eQTL</title>
         <link>https://merrimanlab.github.io/docs/eqtl/cis-eqtl/</link>
         <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
@@ -96,6 +131,27 @@ Novice/Intro: The Carpentries Software Capentry  Shell R Git/Github SQL  Data Ca
         
         <guid>https://merrimanlab.github.io/docs/genome-studio-qc/</guid>
         <description>This guide provides a comprehensive set of steps for the manual curation of genotype calls within Genome Studio. Genome Studio&amp;rsquo;s automatic clustering algorithms are reported to be accurate for ~ 99 % of SNPs. The other ~ 1 % need to be manually reviewed. This guide offers a consistent and logical approach and is aimed at reducing the workload where possible. The steps here are a combination of those published by Guo et al.</description>
+      </item>
+      
+      <item>
+        <title>How is LD calculated?</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</guid>
+        <description>On-the-fly LD calculation The Locus Zoom code calculates the LD of the region (+/-500kb) using the specified SNP (usually lead) as the reference variant to calculate the LD with other variants in the region.
+This is done by calling external tools within R:
+ bcftools to extract the relevant region from the 1000 Genomes reference VCF plink to calculate the LD of specified variant with all other variants in the extracted region  This is the default behaviour when you don&amp;rsquo;t provide the LD information to the LZ call.</description>
+      </item>
+      
+      <item>
+        <title>List of options</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</guid>
+        <description>List of options Compulsory flags: One of snp, gene, or region must be specified to create the plot:
+   Options Description Default value     snp specify the SNP to be annotated (you must also include ignore.lead = TRUE if choosing this option) NA   gene specify the Gene to make the plot around NA   region specify the chromsome region you want to plot (must be specified as c(chr, start, end) NA   data specify the data.</description>
       </item>
       
     

@@ -8,8 +8,26 @@
   </url>
   
   <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/before_you_begin/</loc>
+    <lastmod>2020-01-28T00:36:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/docs/eqtl/</loc>
     <lastmod>2020-01-28T00:36:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/</loc>
+    <lastmod>2020-01-28T00:36:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/</loc>
   </url>
   
   <url>
@@ -74,6 +92,14 @@
   
   <url>
     <loc>https://merrimanlab.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</loc>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</loc>
   </url>
   
 </urlset>

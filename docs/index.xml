@@ -36,6 +36,18 @@ If you only want to know about a specific topic, you can search for things in th
       </item>
       
       <item>
+        <title>Locus Zoom</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/</link>
+        <pubDate>Tue, 28 Jan 2020 00:36:39 +0900</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/</guid>
+        <description>Description This is the documentation for the in-house Locus Zoom software, developed by Tanya, Matt, and Riku.
+If you only need to generate a few plots, you may want to take a look at locuszoom.org instead.
+Requirements and prerequisites Software You will need the following software to run this tool:
+ Latest version of R Locus Zoom code from GitHub bcftools plink version 1.90 or later  Data You will need the following data to run this tool:</description>
+      </item>
+      
+      <item>
         <title>Genome Studio QC</title>
         <link>https://merrimanlab.github.io/docs/genome-studio-qc/</link>
         <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
