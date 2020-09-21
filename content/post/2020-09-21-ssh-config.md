@@ -37,6 +37,10 @@ Host biochemcompute
 
 You can add additional host entries by copying that of biochemcompute and modifying `Host` and `HostName` for the other servers you wish to be able to log into.
 
+3. Close and save with `<ctrl> + x`, `y`, `<Enter>`
+
+4. Ensure the permissions are correct by running `chmod 600 ~/.ssh/config`.
+
 Once you have made this file you can now `ssh` onto the servers by `ssh <Host>`, e.g. `ssh biochemcompute` and the config file takes care of the rest of the details.
 
 you can also use it for `scp`, such as `scp biochemcompute:/path/to/your/file /path/to/put/file` to copy a file from the server storage to your local machine.
