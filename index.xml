@@ -62,6 +62,20 @@ Inputs that change between different Locus Zoom plots are:
       </item>
       
       <item>
+        <title>Search for file under a directory</title>
+        <link>https://merrimanlab.github.io/post/find_file_in_dir/</link>
+        <pubDate>Tue, 22 Sep 2020 08:50:27 +1200</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/find_file_in_dir/</guid>
+        <description>Search for file using &amp;ldquo;find&amp;rdquo; command Per man find:
+ The find utility recursively descends the directory tree for each path
+listed, evaluating an expression (composed of the &amp;ldquo;primaries&amp;rdquo; and
+&amp;ldquo;operands&amp;rdquo; listed below) in terms of each file in the tree.
+ Search for a file under a directory You can search for a file with specific name like so:
+find /path/to/search -name &amp;lt;name of file/dir&amp;gt; The default path to search is the current directory .</description>
+      </item>
+      
+      <item>
         <title>Remote Working</title>
         <link>https://merrimanlab.github.io/quickref/remote-working/</link>
         <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
