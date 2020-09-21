@@ -3,7 +3,7 @@ title: ssh config
 author: Murray Cadzow
 date: '2020-09-21'
 slug: ssh-config
-categories: ["bash", "tips""]
+categories: ["bash", "tips"]
 tags: ["bash","ssh","tips"]
 weight: 0
 enableToc: yes
