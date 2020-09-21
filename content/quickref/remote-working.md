@@ -46,6 +46,7 @@ General biochem servers
 - biochemcompute2.otago.ac.nz
 - biochemcompute3.uod.otago.ac.nz
 
+
 Merriman exclusive
 - biocmerriserver1.otago.ac.nz
 - biocmerriserver2.otago.ac.nz
