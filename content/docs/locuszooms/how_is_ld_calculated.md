@@ -40,6 +40,5 @@ We have not yet implemented any option to turn this feature off, but a work arou
 1. Generate all of the LD for your variants **before** running LZ plot
 2. When you run the LZ code, provide the LD information so that it doesn't calculate the LD on the fly
 
-<!-- TODO: add a link to the "Here" bit -->
-Here is an example of how you would provide LD information for generating multiple LZ plots.
+[Here](/docs/locuszooms/multiple_lz_plots/#modify-the-loop) is an example of how you would provide LD information for generating multiple LZ plots.
 
