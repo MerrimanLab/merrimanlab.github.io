@@ -20,7 +20,7 @@ It's based on the setup that is required for logging into NeSI (https://support.
 1. In a new local terminal run; `mkdir -p ~/.ssh/sockets` this will create a hidden file in your home directory to store socket configurations.
 2. Open your ssh config file with  `nano ~/.ssh/config` and add the following (replacing <username> with your username):
 
-```
+```{.bash .numberLines .lineAnchors startFrom="1"}
 Host *
     ControlMaster auto
     ControlPath ~/.ssh/sockets/ssh_mux_%h_%p_%r
