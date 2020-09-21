@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on MerrimanLab</title>
+    <link>https://merrimanlab.github.io/post/</link>
+    <description>Recent content in Posts on MerrimanLab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://merrimanlab.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>ssh config</title>
+        <link>https://merrimanlab.github.io/post/ssh-config/</link>
+        <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/ssh-config/</guid>
+        <description>This post is about setting up an ssh config to make logging into remote machines easier.
+It&amp;rsquo;s based on the setup that is required for logging into NeSI (https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup)
+ In a new local terminal run; mkdir -p ~/.ssh/sockets this will create a hidden file in your home directory to store socket configurations. Open your ssh config file with nano ~/.ssh/config and add the following (replacing  with your username):  Host * ControlMaster auto ControlPath ~/.</description>
+      </item>
+      
+      <item>
+        <title>new</title>
+        <link>https://merrimanlab.github.io/post/new/</link>
+        <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/new/</guid>
+        <description>hello</description>
+      </item>
+      
+    
+  </channel>
+</rss>

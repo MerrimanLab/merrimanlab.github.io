@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GenomeStudio on MerrimanLab</title>
+    <link>https://merrimanlab.github.io/tags/genomestudio/</link>
+    <description>Recent content in GenomeStudio on MerrimanLab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://merrimanlab.github.io/tags/genomestudio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Genome Studio QC</title>
+        <link>https://merrimanlab.github.io/docs/genome-studio-qc/</link>
+        <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/genome-studio-qc/</guid>
+        <description>This guide provides a comprehensive set of steps for the manual curation of genotype calls within Genome Studio. Genome Studio&amp;rsquo;s automatic clustering algorithms are reported to be accurate for ~ 99 % of SNPs. The other ~ 1 % need to be manually reviewed. This guide offers a consistent and logical approach and is aimed at reducing the workload where possible. The steps here are a combination of those published by Guo et al.</description>
+      </item>
+      
+    
+  </channel>
+</rss>
