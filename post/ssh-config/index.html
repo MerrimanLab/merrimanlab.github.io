@@ -1566,19 +1566,37 @@
 <li>In a new local terminal run; <code>mkdir -p ~/.ssh/sockets</code> this will create a hidden file in your home directory to store socket configurations.</li>
 <li>Open your ssh config file with  <code>nano ~/.ssh/config</code> and add the following (replacing <username> with your username):</li>
 </ol>
-<pre><code>Host *
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-{.bash" data-lang="{.bash">Host *
     ControlMaster auto
     ControlPath ~/.ssh/sockets/ssh_mux_%h_%p_%r
-    ControlPersist 1
+    ControlPersist <span class="m">1</span>
 
 Host biochemcompute
    User &lt;username&gt;
    HostName biochemcompute.uod.otago.ac.nz
    ForwardX11 yes
    ForwardX11Trusted yes
-   ServerAliveInterval 300
-   ServerAliveCountMax 2
-</code></pre><p>You can add additional host entries by copying that of biochemcompute and modifying <code>Host</code> and <code>HostName</code> for the other servers you wish to be able to log into.</p>
+   ServerAliveInterval <span class="m">300</span>
+   ServerAliveCountMax <span class="m">2</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>You can add additional host entries by copying that of biochemcompute and modifying <code>Host</code> and <code>HostName</code> for the other servers you wish to be able to log into.</p>
 <ol start="3">
 <li>
 <p>Close and save with <code>&lt;ctrl&gt; + x</code>, <code>y</code>, <code>&lt;Enter&gt;</code></p>

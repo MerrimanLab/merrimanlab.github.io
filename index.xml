@@ -97,7 +97,7 @@ For students we will have to request your username be allowed VPN access, depend
         <guid>https://merrimanlab.github.io/post/ssh-config/</guid>
         <description>This post is about setting up an ssh config to make logging into remote machines easier.
 It&amp;rsquo;s based on the setup that is required for logging into NeSI (https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup)
- In a new local terminal run; mkdir -p ~/.ssh/sockets this will create a hidden file in your home directory to store socket configurations. Open your ssh config file with nano ~/.ssh/config and add the following (replacing  with your username):  Host * ControlMaster auto ControlPath ~/.</description>
+ In a new local terminal run; mkdir -p ~/.ssh/sockets this will create a hidden file in your home directory to store socket configurations. Open your ssh config file with nano ~/.ssh/config and add the following (replacing  with your username):  1 2 3 4 5 6 7 8 9 10 11 12  Host * ControlMaster auto ControlPath ~/.</description>
       </item>
       
       <item>
