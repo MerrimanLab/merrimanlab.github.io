@@ -78,6 +78,8 @@ alias merritmux1='ssh -t biocmerriserver1 tmux attach'
 
 This particular one does have to have your ssh config set up so that the details for biocmerriserver
 
+---
+
 # R
 
 The main config file for R is the `~/.Rprofile`. You can also have project specific `.Rprofiles` that live in your R project directories.
@@ -91,7 +93,7 @@ This Rprofile is designed to use the shared libraries on the server.
 
 ```
 # set the default cran repository
-options(repos = c("https://cran.stat.auckland.ac.nz/","https://cloud.r-project.org/"))
+options(repos = c(CRAN = "https://cran.stat.auckland.ac.nz/"))
 
 # sets the libpath to be the shared directory if using R > v4.0, or personal if < v4.0
 .libPaths(
