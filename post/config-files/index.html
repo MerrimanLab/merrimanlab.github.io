@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Posts – MerrimanLab</title>
+    <title>Config files – MerrimanLab</title>
     
 
 
@@ -968,22 +968,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://merrimanlab.github.io/post/index.xml">
-<meta name="description" content="" />
+    <meta name="description" content="" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-09-23T00:00:00&#43;0000">
 <meta name="modified" content="2020-09-23T00:00:00&#43;0000">
-
+<meta name="author" content="Murray Cadzow">
 
 <meta property="og:site_name" content="MerrimanLab">
-<meta property="og:title" content="Posts">
-<meta property="og:url" content="https://merrimanlab.github.io/post/">
-<meta property="og:type" content="website">
+<meta property="og:title" content="Config files">
+<meta property="og:url" content="https://merrimanlab.github.io/post/config-files/">
+<meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.75.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://merrimanlab.github.io/post/">
+<link rel="canonical" href="https://merrimanlab.github.io/post/config-files/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1006,10 +1005,17 @@
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "url" : "https://merrimanlab.github.io/post/",
-    "name": "Posts",
-    "description": "Merriman Lab Notebook",
+    "@type": "BlogPosting",
+    "headline": "Config files",
+    "datePublished": "2020-09-23T00:00:00Z",
+    "dateModified": "2020-09-23T00:00:00Z",
+    "url" : "https://merrimanlab.github.io/post/config-files/",
+    "description": "Config files, sometimes referred to as dot-files, are files that you can make to customise the way a program behaves. Two such files you might like to create are .bashrc …",
+    "keywords": ["bash","R","config"],
+    "author": {
+      "@type": "Person",
+      "name": "Murray Cadzow"
+    },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://merrimanlab.github.io/"
@@ -1050,7 +1056,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      
+      Config files
     
   </h6>
   <ul>
@@ -1072,9 +1078,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://merrimanlab.github.io/post/config-files/"
-      class="menu__title ">Config files</a>
+      class="menu__title active">Config files</a>
   </li>
   
 
@@ -1438,11 +1444,11 @@
 </script>
 
         
-  <div class="top">
+ <div class="top">
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">Posts</h2>
+        <h2 class="title">Config files</h2>
       </div>
     </div>
   </div>
@@ -1457,6 +1463,8 @@
   
   
   
+  
+  
   <li >
     
       <a href="https://merrimanlab.github.io/" class="capitalize">Merriman Lab Notebook</a>
@@ -1464,9 +1472,16 @@
   </li>
   
   
+  <li >
+    
+      <a href="https://merrimanlab.github.io/post/" class="capitalize">Posts</a>
+    
+  </li>
+  
+  
   <li  class="is-active" >
     
-      <span>Posts</span>
+      <span>Config files</span>
     
   </li>
   
@@ -1482,16 +1497,15 @@
 </div>
 
         
-  
   <div class="mid">
   <div class="divider">
-
-    <nav id="list-menu" class="l" data-dir="ltr">
+    
+    <nav id="single-menu" class="l" data-dir="ltr">
       
         <div class="menu">
   <h6 class="menu__label">
     
-      
+      Config files
     
   </h6>
   <ul>
@@ -1513,9 +1527,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://merrimanlab.github.io/post/config-files/"
-      class="menu__title ">Config files</a>
+      class="menu__title active">Config files</a>
   </li>
   
 
@@ -1571,28 +1585,6 @@
 
 
 
-<script>
-  var menuTitle = document.querySelectorAll('.menu__title');
-  var modal = document.getElementById("myModal");
-  var drawer = document.getElementById('myDrawer');
-
-  var closeDrawer = function () {
-    setTimeout(function () {
-      modal.style.opacity = 0;
-      drawer.style.left = '-100%';
-      modal.style.left = '-100%';
-    }, 250);
-  }
-
-  menuTitle ? 
-  menuTitle.forEach(function(elem) {
-    elem.onclick = function() {
-      closeDrawer();
-      localStorage.setItem('isDrawerOpen', 'false');
-    }
-  }) : null;
-</script>
-
       
     </nav>
 
@@ -1614,91 +1606,365 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    
+    <p>Config files, sometimes referred to as dot-files, are files that you can make to customise the way a program behaves. Two such files you might like to create are <code>.bashrc</code> to customise how your bash looks and behaves, and <code>.Rprofile</code> to customise how R looks and behaves. Usually these files live in you home directory (<code>~/</code>) and because they have a &lsquo;.&rsquo; at the start are hidden from view by default but in bash you can view these hidden files with <code>ls -A ~/</code>.</p>
+<h1 id="bash">Bash</h1>
+<p><code>.bashrc</code> is the common file that controls your bash set up. Some systems (such as MacOS) also have a file <code>.bash_profile</code>. If your system uses the <code>.bash_profile</code> file, you can make it refer to <code>.bashrc</code> by having this as the contents of <code>.bash_profile</code>:</p>
+<pre><code>[[ -r ~/.bashrc ]] &amp;&amp; . ~/.bashrc
+</code></pre><h2 id="custom-prompt">Custom prompt</h2>
+<p>Creating your own prompt in bash can be really useful rather than having a straight <code>$</code>. <a href="http://ezprompt.net">http://ezprompt.net</a> provides a nice way of modifying your prompt and providing the code to add to your <code>.bashrc</code>.</p>
+<p>Things you might want to do:</p>
+<ul>
+<li>add your username</li>
+<li>add the hostname (the name of the computer)</li>
+<li>add the current directory</li>
+<li>add the full path to the current directory</li>
+<li>have colour</li>
+</ul>
+<h2 id="exported-variables">Exported variables</h2>
+<p>Exporting variables is a useful way for defining environmental settings. Often this is setting a bash variable to tell programs where to look for things. This website has a few examples of bash variables (<a href="https://www.thegeekstuff.com/2010/08/bash-shell-builtin-commands/)">https://www.thegeekstuff.com/2010/08/bash-shell-builtin-commands/)</a>.</p>
+<h3 id="module-example">Module example</h3>
+<p>For instance on the server to be able to make use of the <code>module</code> system, you&rsquo;ll need to add to you <code>.bashrc</code> file:</p>
+<pre><code>export MODULEPATH=/Volumes/scratch/software/modules:$MODULEPATH
+</code></pre><p>This lets <code>module</code> know where to look for the software modules that are installed/configured.</p>
+<h3 id="rmarkdown-pandoc">Rmarkdown Pandoc</h3>
+<p>A useful one on the server, is defining where R is going to look for pandoc for compiling RMarkdown documents.</p>
+<p>I have the following in my <code>.bashrc</code> file</p>
+<pre><code>export RSTUDIO_PANDOC=/usr/lib/rstudio-server/bin/pandoc
+</code></pre><p>When I then open R on the server, the value of that variable is then passed and set to the equivalent in R, and R then knows that I want to use <code>pandoc</code> found at that path. This is important because there might be another instance of <code>pandoc</code> that is available on your <em>PATH</em>. <em>RSTUDIO_PANDOC</em> is the name that R has specified to use if you want to customise which <code>pandoc</code> is used.</p>
+<h3 id="better-bash-history">Better bash history</h3>
+<p>Bash records your history as it goes but if you are operating across multiple windows it doesn&rsquo;t work the way you would hope for - e.g. it is only recorded from a single given session, even if you work in multiple. <em>PROMPT_COMMAND</em> is a bash variable that is run as part of running commands. This particular one is designed to time and date stamp commands (not run as root) and their working directory into a daily log file. The logs live in <code>~/.logs/</code> so this needs to be made for the command to run <code>mkdir -p ~/.logs</code>.</p>
+<pre><code>export PROMPT_COMMAND='if [ &quot;$(id -u)&quot; -ne 0 ]; then echo &quot;$(date &quot;+%Y-%m-%d.%H:%M:%S&quot;) $(pwd) $(history 1)&quot; &gt;&gt; ~/.logs/bash-history-$(date &quot;+%Y-%m-%d&quot;).log; fi'
+</code></pre><p>If I want to search my logs I can use <code>grep &lt;command&gt; ~/.logs/*</code> and it will tell me all the times and directories I ran a command, and how I ran it. The history in these log files is made up of all commands you run on the computer, regardless of how many terminal windows you have open.</p>
+<h2 id="aliases">Aliases</h2>
+<p>Aliases can be quite useful for common commands and arguments you run.</p>
+<p>For instance I have aliases set up to ssh onto the server and connect to a tmux session if one is already running.</p>
+<pre><code>alias merritmux1='ssh -t biocmerriserver1 tmux attach'
+</code></pre><p>This particular one does have to have your ssh config set up so that the details for biocmerriserver</p>
+<h1 id="r">R</h1>
+<p>The main config file for R is the <code>~/.Rprofile</code>. You can also have project specific <code>.Rprofiles</code> that live in your R project directories.</p>
+<h2 id="server-rprofile-example">Server .Rprofile example</h2>
+<p>This Rprofile is designed to use the shared libraries on the server.</p>
+<p><strong>Edit the <em>firstname</em> <em>lastname</em> spots</strong></p>
+<pre><code># set the default cran repository
+options(repos = c(&quot;https://cran.stat.auckland.ac.nz/&quot;,&quot;https://cloud.r-project.org/&quot;))
+
+# sets the libpath to be the shared directory if using R &gt; v4.0, or personal if &lt; v4.0
+.libPaths(
+    c(paste0(&quot;/Volumes/scratch/merrimanlab/R/x86_64-pc-linux-gnu-library/&quot;,version$major,&quot;.&quot;, strsplit(version$minor, &quot;\\.&quot;)[[1]][1], &quot;/&quot;), # shared merriman library
+    paste0(&quot;~/R/x86_64-&quot;,ifelse(version$major == &quot;4&quot;, &quot;pc&quot;, &quot;redhat&quot;),&quot;-linux-gnu-library/&quot;,version$major,&quot;.&quot;, strsplit(version$minor, &quot;\\.&quot;)[[1]][1],&quot;/&quot;) # personal library
+)) 
+
+# load 'helper' packages automatically if running 
+# an interactive session - i.e. not a script
+if (interactive()) {
+  suppressMessages(require(devtools))
+  suppressMessages(require(usethis))
+  suppressMessages(require(testthat))
+}
+
+
+# warn on partial matches
+options(
+  warnPartialMatchArgs = TRUE,
+  warnPartialMatchDollar = TRUE,
+  warnPartialMatchAttr = TRUE
+)
+
+# fancy quotes are annoying and lead to
+# 'copy + paste' bugs / frustrations
+options(useFancyQuotes = FALSE)
+
+# set some author info that packages use
+options(&quot;devtools.desc&quot; = list(
+  Author = &quot;firstname lastname&quot;,
+  Maintainer = paste0(&quot;firstname lastname&quot;, &quot; &lt;&quot;, &quot;email address&quot;, &quot;&gt;&quot;),
+  License = &quot;MIT + file LICENSE&quot;,
+  Version = &quot;0.0.1&quot;
+))
+options(&quot;devtools.name&quot; = &quot;firstname lastname&quot;)
+
+# use more cores if possible installing packages
+options(Ncpus = 8)
+
+</code></pre><h2 id="libraries">Libraries</h2>
+<p>In general you want to avoid calling libraries that are involved in analyses because this can alter how reproducible your code would be if you passed it to someone else that didn&rsquo;t have your <code>.Rprofile</code> - e.g. don&rsquo;t have <code>library(tidyverse)</code> in you <code>.Rprofile</code>. It can be useful to automatically load helper packages such as <code>devtools</code> and <code>usethis</code> since they aren&rsquo;t used for analysis but are extremely helpful to have loaded when you want to set things up.</p>
+
   </article>
 </div>
 
       
-        
-<div class="list-section">
+<div class="grow"></div>
+<nav class="pagination-single">
   
-    <div class="list-section__item">
-      <a href="https://merrimanlab.github.io/post/config-files/" class="list-section__item--link">
-        Config files
+    
+    <div class="grow"></div>
+    
+      <a href="https://merrimanlab.github.io/post/find_file_in_dir/" title="Search for file under a directory" class="pagination-single__right">
+        <div class="pagination-single__left-title">Search for file under a directory</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
       </a>
-      <div class="list-section__item--desc">
-        
-      </div>
-    </div>
+    
   
-    <div class="list-section__item">
-      <a href="https://merrimanlab.github.io/post/find_file_in_dir/" class="list-section__item--link">
-        Search for file under a directory
-      </a>
-      <div class="list-section__item--desc">
-        
-      </div>
-    </div>
-  
-    <div class="list-section__item">
-      <a href="https://merrimanlab.github.io/post/ssh-config/" class="list-section__item--link">
-        ssh config
-      </a>
-      <div class="list-section__item--desc">
-        
-      </div>
-    </div>
-  
-  </div>
+</nav>
+
 
       
-      
+  
 
     </article>
-
+    
     <section id="list-side" class="r" data-dir="ltr">
+      
+        <div class="toc">
+  <h6 class="toc__label">What&#39;s on this Page</h6>
+  <div class="toc__body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#custom-prompt">Custom prompt</a></li>
+    <li><a href="#exported-variables">Exported variables</a>
+      <ul>
+        <li><a href="#module-example">Module example</a></li>
+        <li><a href="#rmarkdown-pandoc">Rmarkdown Pandoc</a></li>
+        <li><a href="#better-bash-history">Better bash history</a></li>
+      </ul>
+    </li>
+    <li><a href="#aliases">Aliases</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#server-rprofile-example">Server .Rprofile example</a></li>
+    <li><a href="#libraries">Libraries</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+      
     </section>
 
   </div>
 </div>
 
+
+
+
+
+<script defer src="/js/helper/getParents.min.js"></script>
+
+<script defer src="/js/helper/closest.min.js"></script>
+
+<script defer src="/js/helper/prev.min.js"></script>
+
+<script defer src="/js/helper/prop.min.js"></script>
+
+<script defer src="/js/helper/fadeinout.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    'use strict';
+    
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+    
+    
+    
+    var lib = JSON.parse("null");
+
+    if (lib && lib.includes('mermaid')) {
+      var themeVariant = localStorage.getItem('theme') || 'light';
+
+      if (themeVariant === "dark") {
+        mermaid.initialize({ theme: 'dark' });
+      } else {
+        mermaid.initialize({ theme: 'default' });
+      }
+      
+      var mermaids = [];
+      [].push.apply(mermaids, document.getElementsByClassName('language-mermaid'));
+      mermaids.forEach(function(elem) {
+        var elemParentNode = elem.parentNode;
+
+        if (elemParentNode !== document.body) {
+          elemParentNode.parentNode.insertBefore(elem, elemParentNode);
+          elemParentNode.parentNode.removeChild(elemParentNode);
+        }
+
+        var newElemWrapper = document.createElement('div');
+        newElemWrapper.classList.add('mermaid');
+        newElemWrapper.innerHTML = elem.innerHTML;
+        elem.replaceWith(newElemWrapper);
+      });
+    }
+    
+    
+
+    
+    if (lib && lib.includes('katex')) {
+      var mathElements = document.getElementsByClassName('math');
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
+
+      renderMathInElement(document.querySelector('.single__contents'), options);
+    }
+    
+
+
+    
+    if (lib && lib.includes('flowchartjs')) {
+      
+      var options = JSON.parse("{\"arrow-end\":\"block\",\"element-color\":\"black\",\"fill\":\"white\",\"flowstate\":{\"approved\":{\"fill\":\"#58C4A3\",\"font-size\":12,\"no-text\":\"n/a\",\"yes-text\":\"APPROVED\"},\"current\":{\"fill\":\"yellow\",\"font-color\":\"red\",\"font-weight\":\"bold\"},\"future\":{\"fill\":\"#FFFF99\"},\"invalid\":{\"fill\":\"#444444\"},\"past\":{\"fill\":\"#CCCCCC\",\"font-size\":12},\"rejected\":{\"fill\":\"#C45879\",\"font-size\":12,\"no-text\":\"REJECTED\",\"yes-text\":\"n/a\"},\"request\":{\"fill\":\"blue\"}},\"font-color\":\"black\",\"font-size\":14,\"line-color\":\"black\",\"line-length\":50,\"line-width\":3,\"no-text\":\"no\",\"scale\":1,\"symbols\":{\"end\":{\"class\":\"end-element\"},\"start\":{\"element-color\":\"green\",\"fill\":\"yellow\",\"font-color\":\"red\"}},\"text-margin\":10,\"x\":0,\"y\":0,\"yes-text\":\"yes\"}");
+      var jsonContent = null;
+
+      var flowchartPrefix = "language-flowchart";
+      var index = 0;
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + flowchartPrefix + "]"), function(x){
+          x.style.display = 'none'
+          x.parentNode.style.backgroundColor = "transparent"
+          jsonContent = x.innerText;
+
+          var node0 = document.createElement('div');
+          node0.id = 'flowchart' + index;
+          x.parentNode.insertBefore(node0, x);
+
+          var diagram = flowchart.parse(jsonContent);
+          diagram.drawSVG("flowchart"+index, options);
+
+          index +=1;
+      });      
+    }
+    
+
+
+    
+    if (lib && lib.includes('chart')) {
+      var borderColor = "#666";
+      var bgColor = "#ddd";
+      var borderWidth = 2;
+
+      Chart.defaults.global.elements.rectangle.borderWidth = borderWidth;
+      Chart.defaults.global.elements.rectangle.borderColor = borderColor;
+      Chart.defaults.global.elements.rectangle.backgroundColor = bgColor;
+
+      Chart.defaults.global.elements.line.borderWidth = borderWidth;
+      Chart.defaults.global.elements.line.borderColor = borderColor;
+      Chart.defaults.global.elements.line.backgroundColor = bgColor;
+
+      Chart.defaults.global.elements.point.borderWidth = borderWidth;
+      Chart.defaults.global.elements.point.borderColor = borderColor;
+      Chart.defaults.global.elements.point.backgroundColor = bgColor;
+
+      var chartPrefix = "language-chart";
+      var index = 0;
+      var jsonContent = null;
+
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + chartPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        var node0 = document.createElement('canvas');
+        var source = null;
+        node0.height = 200;
+        node0.style.height = 200;
+        node0.id = 'myChart' + index;
+        source = JSON.parse(jsonContent);
+        x.parentNode.insertBefore(node0, x);
+        var ctx = document.getElementById('myChart' + index).getContext('2d');
+        var myChart = new Chart(ctx, source);
+        index += 1;
+      });            
+    }
+    
+
+
+    
+    if (lib && lib.includes('viz')) {
+      var vizPrefix = "language-viz-";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        var engine;
+        x.getAttribute("class").split(" ").forEach(function (cls) {
+          if (cls.startsWith(vizPrefix)) {
+            engine = cls.substr(vizPrefix.length);
+          }
+        });
+        var viz = new Viz();
+        viz.renderSVGElement(x.innerText, { engine: engine })
+          .then(function (element) {
+            element.style.width = "100%";
+            x.parentNode.insertBefore(element, x);
+          })
+      });
+    }
+    
+    
+  });
+</script>
 <script>
   var listSide = document.getElementById('list-side');
   var listMain = document.getElementById('list-main');
-  var listMenu = document.getElementById('list-menu');
-  
+  var singleMenu = document.getElementById('single-menu');
+
   enquire.register("screen and (max-width:1280px)", {
     match: function () {
       listSide.className = 'r';
       listMain.className = 'm';
-      listMenu.className = 'l';
+      singleMenu.className = 'l';
     },
     unmatch: function () {
       listSide.className = 'r';
       listMain.className = 'm';
-      listMenu.className = 'l';
+      singleMenu.className = 'l';
     },
   }).register("screen and (max-width:960px)", {
     match: function () {
       listSide.className = 'hide';
       listMain.className = 'mr';
-      listMenu.className = 'l';
+      singleMenu.className = 'l';
     },
     unmatch: function () {
       listSide.className = 'r';
       listMain.className = 'm';
-      listMenu.className = 'l';
+      singleMenu.className = 'l';
     },
   }).register("screen and (max-width:600px)", {
     match: function () {
       listSide.className = 'hide';
       listMain.className = 'lmr';
-      listMenu.className = 'hide';
+      singleMenu.className = 'hide';
     },
     unmatch: function () {
       listSide.className = 'hide';
       listMain.className = 'mr';
-      listMenu.className = 'l';
+      singleMenu.className = 'l';
+      
     },
   });
 </script>

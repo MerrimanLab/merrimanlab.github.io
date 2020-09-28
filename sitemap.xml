@@ -32,21 +32,36 @@
   
   <url>
     <loc>https://merrimanlab.github.io/tags/bash/</loc>
-    <lastmod>2020-09-22T08:50:27+12:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/config/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/config-files/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://merrimanlab.github.io/post/</loc>
-    <lastmod>2020-09-22T08:50:27+12:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/post/find_file_in_dir/</loc>
-    <lastmod>2020-09-22T08:50:27+12:00</lastmod>
+    <loc>https://merrimanlab.github.io/tags/r/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://merrimanlab.github.io/tags/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/find_file_in_dir/</loc>
     <lastmod>2020-09-22T08:50:27+12:00</lastmod>
   </url>
   
@@ -91,7 +106,7 @@
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/tags/r/</loc>
+    <loc>https://merrimanlab.github.io/tags/eqtl/</loc>
     <lastmod>2020-09-14T00:00:00+00:00</lastmod>
   </url>
   

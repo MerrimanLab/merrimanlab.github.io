@@ -62,6 +62,15 @@ Inputs that change between different Locus Zoom plots are:
       </item>
       
       <item>
+        <title>Config files</title>
+        <link>https://merrimanlab.github.io/post/config-files/</link>
+        <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/config-files/</guid>
+        <description>Config files, sometimes referred to as dot-files, are files that you can make to customise the way a program behaves. Two such files you might like to create are .bashrc to customise how your bash looks and behaves, and .Rprofile to customise how R looks and behaves. Usually these files live in you home directory (~/) and because they have a &amp;lsquo;.&amp;rsquo; at the start are hidden from view by default but in bash you can view these hidden files with ls -A ~/.</description>
+      </item>
+      
+      <item>
         <title>Search for file under a directory</title>
         <link>https://merrimanlab.github.io/post/find_file_in_dir/</link>
         <pubDate>Tue, 22 Sep 2020 08:50:27 +1200</pubDate>
@@ -97,7 +106,7 @@ For students we will have to request your username be allowed VPN access, depend
         <guid>https://merrimanlab.github.io/post/ssh-config/</guid>
         <description>This post is about setting up an ssh config to make logging into remote machines easier.
 It&amp;rsquo;s based on the setup that is required for logging into NeSI (https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup)
- In a new local terminal run; mkdir -p ~/.ssh/sockets this will create a hidden file in your home directory to store socket configurations. Open your ssh config file with nano ~/.ssh/config and add the following (replacing  with your username):  1 2 3 4 5 6 7 8 9 10 11 12  Host * ControlMaster auto ControlPath ~/.</description>
+ In a new local terminal run; mkdir -p ~/.ssh/sockets this will create a hidden file in your home directory to store socket configurations. Open your ssh config file with nano ~/.ssh/config and add the following (replacing  with your username):  Host * ControlMaster auto ControlPath ~/.</description>
       </item>
       
       <item>
@@ -108,7 +117,7 @@ It&amp;rsquo;s based on the setup that is required for logging into NeSI (https:
         <guid>https://merrimanlab.github.io/docs/eqtl/cis-eqtl/</guid>
         <description>Repo: https://github.com/MerrimanLab/QTL_pipelines
 This pipeline runs a co-localisation analysis using a list of key SNPs, a GWAS results file, and the GTEx dataset.
-bash cis_eqtl_pipeline.sh my_gwas.txt my_snplist.txt 1000000 </description>
+bash cis_eqtl_pipeline.sh my_gwas.txt my_snplist.txt 1000000 8 </description>
       </item>
       
       <item>
