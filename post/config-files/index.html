@@ -1640,13 +1640,14 @@
 <p>For instance I have aliases set up to ssh onto the server and connect to a tmux session if one is already running.</p>
 <pre><code>alias merritmux1='ssh -t biocmerriserver1 tmux attach'
 </code></pre><p>This particular one does have to have your ssh config set up so that the details for biocmerriserver</p>
+<hr />
 <h1 id="r">R</h1>
 <p>The main config file for R is the <code>~/.Rprofile</code>. You can also have project specific <code>.Rprofiles</code> that live in your R project directories.</p>
 <h2 id="server-rprofile-example">Server .Rprofile example</h2>
 <p>This Rprofile is designed to use the shared libraries on the server.</p>
 <p><strong>Edit the <em>firstname</em> <em>lastname</em> spots</strong></p>
 <pre><code># set the default cran repository
-options(repos = c(&quot;https://cran.stat.auckland.ac.nz/&quot;,&quot;https://cloud.r-project.org/&quot;))
+options(repos = c(CRAN = &quot;https://cran.stat.auckland.ac.nz/&quot;))
 
 # sets the libpath to be the shared directory if using R &gt; v4.0, or personal if &lt; v4.0
 .libPaths(
