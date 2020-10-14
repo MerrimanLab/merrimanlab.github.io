@@ -1,17 +1,15 @@
 <article class="summary-card">
-  <header>
-    <h5 class="title h5"><a href='{{ .Permalink }}'> {{ .Title }}</a></h5>
-    <div class="subtitle caption">
-      {{ partial "main/component/article-meta.html" . }}
-    </div>
-  </header>
+  <h5 class="title h5"><a href='{{ .Permalink }}'> {{ .Title }}</a></h5>
+  <div class="subtitle caption" style="padding: 0.5rem">
+    {{ partial "main/component/article-meta.html" . }}
+  </div>
   {{ $params := .Params }}
   <div class="summary-card__content">
     <div class="summary-card__text p2">
       {{ with $params.Description }}
         {{ . }}
       {{ else }}
-        {{ .Summary }}
+        {{ .Summary | truncate 250 }}
       {{ end }}
     </div>
     {{ if $params.image }}
