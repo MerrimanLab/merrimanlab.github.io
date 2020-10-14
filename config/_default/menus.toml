@@ -21,3 +21,9 @@
   name = "About"
   url = "about"
   weight = 2
+
+[[main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "tags"
+  weight = 2

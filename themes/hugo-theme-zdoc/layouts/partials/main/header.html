@@ -2,7 +2,19 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">{{ .Title }}</h2>
+        <h2 class="title" style="margin-bottom: 1rem">{{ .Title }}</h2>
+        <h5 class="title" style="font-size: 1.0rem;line-height: 1.0rem; margin-top: 1.0rem">
+            {{ $taxo := "tags" }} <!-- Use the plural form here -->
+            {{ with .Param $taxo }}
+                <strong>Tag{{ if gt (len .) 1 }}s{{ end }}:</strong>
+                {{ range $index, $tag := . }}
+                {{- if gt $index 0 }}, {{ end -}}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxo $tag) -}}
+                <a href="{{ .Permalink }}">{{ $tag }}</a>
+                {{- end -}}
+                {{- end -}}
+            {{ end }}
+        </h5>
       </div>
     </div>
   </div>
