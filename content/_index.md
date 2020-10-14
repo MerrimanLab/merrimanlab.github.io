@@ -6,7 +6,7 @@ landing:
   title:
     - Merriman Lab Notebook
   text:
-    - Where you will find all the answers to your problems...
+    - Where you will find answers to all your problems...
   titleColor:
   textColor:
   spaceBetweenTitleText: 25
