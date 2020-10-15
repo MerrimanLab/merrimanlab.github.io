@@ -7,12 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 15 Oct 2020 11:42:39 +1300</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2020 10:14:49 +1300</lastBuildDate>
     
         <atom:link href="https://merrimanlab.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Beyond Software Carpentry Git</title>
+        <link>https://merrimanlab.github.io/post/2020-10-16-beyond-swc-git/</link>
+        <pubDate>Fri, 16 Oct 2020 10:14:49 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/2020-10-16-beyond-swc-git/</guid>
+        <description>Intro Once you have finished Software Carpentry Git lesson, you should be able to do basic version controlling with Git. You would have learnt how to:
+ Stage and commit your changes Make a remote GitHub repository Push and pull from your remote repository Solve merge conflicts  These skills are enough for you to get started with tracking and maintaining your own project, but once you start collaborating with others, you can run into trouble really quick.</description>
+      </item>
       
       <item>
         <title>A beginner&#39;s guide to making new posts with Hugo</title>

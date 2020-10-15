@@ -9,7 +9,17 @@
   
   <url>
     <loc>https://merrimanlab.github.io/docs/locuszooms/before_you_begin/</loc>
-    <lastmod>2020-01-28T00:36:39+09:00</lastmod>
+    <lastmod>2020-09-18T00:36:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/</loc>
+    <lastmod>2020-09-18T00:36:39+09:00</lastmod>
   </url>
   
   <url>
@@ -18,16 +28,28 @@
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/docs/locuszooms/</loc>
-    <lastmod>2020-01-28T00:36:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</loc>
-  </url>
-  
-  <url>
     <loc>https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/2020-10-16-beyond-swc-git/</loc>
+    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/git/</loc>
+    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/</loc>
+    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/</loc>
+    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
   </url>
   
   <url>
@@ -42,16 +64,6 @@
   
   <url>
     <loc>https://merrimanlab.github.io/tags/markdown/</loc>
-    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/post/</loc>
-    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/</loc>
     <lastmod>2020-10-15T11:42:39+13:00</lastmod>
   </url>
   
@@ -111,6 +123,16 @@
   </url>
   
   <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/docs/eqtl/cis-eqtl/</loc>
     <lastmod>2020-09-14T00:00:00+00:00</lastmod>
   </url>
@@ -157,14 +179,6 @@
   
   <url>
     <loc>https://merrimanlab.github.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</loc>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</loc>
   </url>
   
 </urlset>

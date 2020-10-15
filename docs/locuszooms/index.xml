@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 28 Jan 2020 00:36:39 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 00:36:39 +0900</lastBuildDate>
     
         <atom:link href="https://merrimanlab.github.io/docs/locuszooms/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
       <item>
         <title>Before You Begin</title>
         <link>https://merrimanlab.github.io/docs/locuszooms/before_you_begin/</link>
-        <pubDate>Tue, 28 Jan 2020 00:36:39 +0900</pubDate>
+        <pubDate>Fri, 18 Sep 2020 00:36:39 +0900</pubDate>
         
         <guid>https://merrimanlab.github.io/docs/locuszooms/before_you_begin/</guid>
         <description>Requirements and prerequisites Here is a list of requirements that you will need in order to run this tool (relatively) smoothly.
@@ -29,7 +29,7 @@ Software You will need the following software to run this tool:
       <item>
         <title>How to generate LZ plot</title>
         <link>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/</guid>
         <description>Make Locus Zoom-like plots with your own LD matrix This script creates an R function to create regional Manhattan plots with points coloured according to LD and genes annotated beneath.
@@ -40,7 +40,7 @@ The LD file can be generated on the fly, as long as you have access to the 1000G
       <item>
         <title>Generate multiple LZ plots</title>
         <link>https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/</guid>
         <description>Make multiple Locus Zoom plots This is a general guide and recommendation on how to make multiple Locus Zooms.
@@ -52,7 +52,7 @@ Inputs that change between different Locus Zoom plots are:
       <item>
         <title>How is LD calculated?</title>
         <link>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</guid>
         <description>On-the-fly LD calculation The Locus Zoom code calculates the LD of the region (+/-500kb) using the specified SNP (usually lead) as the reference variant to calculate the LD with other variants in the region.
@@ -63,7 +63,7 @@ This is done by calling external tools within R:
       <item>
         <title>List of options</title>
         <link>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/docs/locuszooms/list_of_options/</guid>
         <description>List of options Compulsory flags: One of snp, gene, or region must be specified to create the plot:
