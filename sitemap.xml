@@ -31,6 +31,31 @@
   </url>
   
   <url>
+    <loc>https://merrimanlab.github.io/post/2020-10-15-making-posts/</loc>
+    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/hugo/</loc>
+    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/markdown/</loc>
+    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/</loc>
+    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/</loc>
+    <lastmod>2020-10-15T11:42:39+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/tags/bash/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
@@ -46,17 +71,7 @@
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/post/</loc>
-    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://merrimanlab.github.io/tags/r/</loc>
-    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
