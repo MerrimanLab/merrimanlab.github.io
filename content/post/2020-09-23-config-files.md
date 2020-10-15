@@ -4,7 +4,7 @@ author: Murray Cadzow
 date: '2020-09-23'
 slug: config-files
 categories: ['config']
-tags: ['bash','R','config']
+tags: ['bash','R','config','tips']
 weight: 0
 enableToc: yes
 tocLevels:
