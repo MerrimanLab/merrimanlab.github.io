@@ -1,6 +1,6 @@
 ---
 title: "Parallel LZ plots"
-date: 09-18-2020
+date: 2020-09-18
 draft: true
 weight: 4
 enableToc: true

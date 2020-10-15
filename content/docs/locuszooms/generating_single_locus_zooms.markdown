@@ -1,6 +1,6 @@
 ---
 title: "How to generate LZ plot"
-date: 09-18-2020
+date: 2020-09-18
 draft: false
 weight: 2
 output:

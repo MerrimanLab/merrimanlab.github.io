@@ -1,6 +1,6 @@
 ---
 title: "Generate multiple LZ plots"
-date: 09-18-2020
+date: 2020-09-18
 draft: false
 weight: 3
 enableToc: true
