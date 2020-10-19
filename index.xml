@@ -62,6 +62,18 @@ Inputs that change between different Locus Zoom plots are:
       </item>
       
       <item>
+        <title>GNU parallel</title>
+        <link>https://merrimanlab.github.io/post/2020-10-19-parallel/</link>
+        <pubDate>Mon, 19 Oct 2020 13:22:48 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/2020-10-19-parallel/</guid>
+        <description>Intro GNU parallel (commonly referred to as just parallel) is a command line tool that allows you to run multiple independent tasks at the same time by using the available cores on a computer.
+This post will cover:
+ How to use parallel Some useful features provided by parallel  Basic usage The basic syntax of a parallel command is:
+parallel &amp;quot;&amp;lt;command&amp;gt; {}&amp;quot; ::: &amp;lt;input&amp;gt; where &amp;lt;command&amp;gt; is the command you want to run in parallel for all the &amp;lt;input&amp;gt; you provide.</description>
+      </item>
+      
+      <item>
         <title>Beyond Software Carpentry Git</title>
         <link>https://merrimanlab.github.io/post/2020-10-16-beyond-swc-git/</link>
         <pubDate>Fri, 16 Oct 2020 10:14:49 +1300</pubDate>

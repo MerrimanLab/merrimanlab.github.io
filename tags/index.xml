@@ -7,12 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 16 Oct 2020 10:14:49 +1300</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2020 13:22:48 +1300</lastBuildDate>
     
         <atom:link href="https://merrimanlab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>bash</title>
+        <link>https://merrimanlab.github.io/tags/bash/</link>
+        <pubDate>Mon, 19 Oct 2020 13:22:48 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/tags/bash/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>parallel</title>
+        <link>https://merrimanlab.github.io/tags/parallel/</link>
+        <pubDate>Mon, 19 Oct 2020 13:22:48 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/tags/parallel/</guid>
+        <description></description>
+      </item>
       
       <item>
         <title>git</title>
@@ -38,15 +56,6 @@
         <pubDate>Thu, 15 Oct 2020 11:42:39 +1300</pubDate>
         
         <guid>https://merrimanlab.github.io/tags/markdown/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>bash</title>
-        <link>https://merrimanlab.github.io/tags/bash/</link>
-        <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://merrimanlab.github.io/tags/bash/</guid>
         <description></description>
       </item>
       

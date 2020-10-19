@@ -33,22 +33,37 @@
   </url>
   
   <url>
+    <loc>https://merrimanlab.github.io/tags/bash/</loc>
+    <lastmod>2020-10-19T13:22:48+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/2020-10-19-parallel/</loc>
+    <lastmod>2020-10-19T13:22:48+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/parallel/</loc>
+    <lastmod>2020-10-19T13:22:48+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/</loc>
+    <lastmod>2020-10-19T13:22:48+13:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/</loc>
+    <lastmod>2020-10-19T13:22:48+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/post/2020-10-16-beyond-swc-git/</loc>
     <lastmod>2020-10-16T10:14:49+13:00</lastmod>
   </url>
   
   <url>
     <loc>https://merrimanlab.github.io/tags/git/</loc>
-    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/post/</loc>
-    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/</loc>
     <lastmod>2020-10-16T10:14:49+13:00</lastmod>
   </url>
   
@@ -65,11 +80,6 @@
   <url>
     <loc>https://merrimanlab.github.io/tags/markdown/</loc>
     <lastmod>2020-10-15T11:42:39+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/bash/</loc>
-    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
