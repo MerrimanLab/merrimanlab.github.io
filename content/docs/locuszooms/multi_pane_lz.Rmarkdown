@@ -1,0 +1,80 @@
+---
+title: "LZ with multiple data sets"
+date: 2020-10-28T15:45:55+13:00
+draft: false
+weight: 4
+enableToc: true
+tocLevels:
+  - h2
+  - h3
+  - h4
+output:
+  md_document:
+    variant: markdown_github
+    preserve_yaml: true
+    pandoc_args: ["--wrap=none"]
+---
+
+# Stack LZ plots from multiple summary data
+
+This page is a general introduction to add multiple "panes" to your LZ plots, using multiple summary data.
+
+## Why use multiple summary data?
+
+Often we want to overlay LZ plots of the same region from different summary data sets (e.g. different traits or comparison with cis-eQTL).
+
+Rather than generating separate LZ plots for each summary data and compare them, we have provided a way to add as many "panes" of LZ as you like into a single output, where each pane shows the LZ plot of a particular region for the summary data sets you have provided.
+
+## Plotting multi-pane LZ plots
+
+### Adding extra summary data
+
+In order to use multiple summary data for LZ, you have to pass the data sets as a `list`, rather than a `data.frame`:
+
+```{r eval = F}
+
+data1 = read.table('path/to/data1.tsv', sep = '\t', header = T, stringsAsFactors = F)
+data2 = read.table('path/to/data2.tsv', sep = '\t', header = T, stringsAsFactors = F)
+
+all_data = list(data1 = data1, data2 = data2)
+
+```
+
+The names of the data sets in the list are optional, but it will be used to label the panes so it is recommended to name them appropriately.
+
+Make sure all summary data in the list has the required columns and in the right format.
+
+### Plotting the data
+
+Once the data sets are in a list variable, you can pass this list to the `locus.zoom()` function as before, but with the extra `nplots = TRUE` argument:
+
+```{r eval = F}
+
+locus.zoom(data = all_data,
+	   snp = "rs1121980",
+	   offset_bp = 500000,
+	   genes.data = UCSC_GRCh37_Genes_UniqueList.txt,
+	   plot.title = "Association of FTO with BMI in Europeans",
+	   file.name = "rs1121980.jpg",
+	   nplots = TRUE)
+
+```
+
+The `locus.zoom()` function will pull out the relevant region from each of the summary data sets (assuming the region is present in both data sets) and plot it on top of each other.
+
+## Key implementation details
+
+### Lead SNP
+
+The lead SNP for all the panes are taken from the **first data set** in the list, and therefore this variant will be labelled in all of the panes, regardless of its significance in other summary data.
+
+If the lead SNP is not present in the data set, it will not be labelled.
+
+### LD calculation
+
+LD is calculated based on the lead SNP of the first data set, and this LD information is used for the other panes even if the lead SNP doesn't exist in that particular data.
+
+This is to allow for better comparison between the data sets. For example, you will be able to see which variant(s) in the second pane is in LD with the lead SNP in the first pane.
+
+Currently, nothing is implemented to allow for independent LD per data set, so you won't be able to make meaningful comparisons based on LD if the data sets you provided are from different ancestry.
+
