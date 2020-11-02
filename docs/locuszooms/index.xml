@@ -50,6 +50,17 @@ Inputs that change between different Locus Zoom plots are:
       </item>
       
       <item>
+        <title>LZ with multiple data sets</title>
+        <link>https://merrimanlab.github.io/docs/locuszooms/multi_pane_lz/</link>
+        <pubDate>Wed, 28 Oct 2020 15:45:55 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/locuszooms/multi_pane_lz/</guid>
+        <description>Stack LZ plots from multiple summary data This page is a general introduction to add multiple &amp;ldquo;panes&amp;rdquo; to your LZ plots, using multiple summary data.
+Why use multiple summary data? Often we want to overlay LZ plots of the same region from different summary data sets (e.g. different traits or comparison with cis-eQTL).
+Rather than generating separate LZ plots for each summary data and compare them, we have provided a way to add as many &amp;ldquo;panes&amp;rdquo; of LZ as you like into a single output, where each pane shows the LZ plot of a particular region for the summary data sets you have provided.</description>
+      </item>
+      
+      <item>
         <title>How is LD calculated?</title>
         <link>https://merrimanlab.github.io/docs/locuszooms/how_is_ld_calculated/</link>
         <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
