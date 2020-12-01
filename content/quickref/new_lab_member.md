@@ -54,8 +54,10 @@ Once local computer and Biochem accounts have been set up:
   - set up ssh config
   - set up `.bashrc`
   - set up `.Rprofile`
+  - Introduction to the `module` system
 - walk-through of XSan structure and what lives where
 - R and RStudio
+  - make sure gets updated
 
 
 Very useful introduction courses to get some base level skills that are needed 
