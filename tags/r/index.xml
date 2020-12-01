@@ -23,17 +23,6 @@
         <description>Config files, sometimes referred to as dot-files, are files that you can make to customise the way a program behaves. Two such files you might like to create are .bashrc to customise how your bash looks and behaves, and .Rprofile to customise how R looks and behaves. Usually these files live in you home directory (~/) and because they have a &amp;lsquo;.&amp;rsquo; at the start are hidden from view by default but in bash you can view these hidden files with ls -A ~/.</description>
       </item>
       
-      <item>
-        <title>Training Resources</title>
-        <link>https://merrimanlab.github.io/quickref/training-resources/</link>
-        <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://merrimanlab.github.io/quickref/training-resources/</guid>
-        <description>Current training resources for the lab
-Novice/Intro: The Carpentries Software Capentry  Shell R Git/Github SQL  Data Carpentry  Data analysis and visualisation in R Best practice spreadsheets for use later in R  Custom made Merriman Lab R tutorial
- Intro lesson Stats lesson Programming lesson ggplot2 lesson  Additional: R  dplyr ggplot2 RMySQL Rmarkdown  </description>
-      </item>
-      
     
   </channel>
 </rss>

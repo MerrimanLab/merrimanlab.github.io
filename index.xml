@@ -245,6 +245,16 @@ Novice/Intro: The Carpentries Software Capentry  Shell R Git/Github SQL  Data Ca
         <description>This guide provides a comprehensive set of steps for the manual curation of genotype calls within Genome Studio. Genome Studio&amp;rsquo;s automatic clustering algorithms are reported to be accurate for ~ 99 % of SNPs. The other ~ 1 % need to be manually reviewed. This guide offers a consistent and logical approach and is aimed at reducing the workload where possible. The steps here are a combination of those published by Guo et al.</description>
       </item>
       
+      <item>
+        <title>New Lab Member</title>
+        <link>https://merrimanlab.github.io/quickref/new-lab-member/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/quickref/new-lab-member/</guid>
+        <description>Orientation A (sort of) induction for new members to the lab to help them get up and running
+Things that need to be sorted out for physical access  ID card loaded into door access system key (if applicable) Lab health and safety brief Dept health and safety  Comms  email  added to lab list lab meetings   invited to lab Slack merrimanlab.github.io  Computer access  Lab computer assigned  Create user   Biochem credentials for printing and server access SNPmax login (if applicable) Github account  create account added to lab Org    Computer setup Once local computer and Biochem accounts have been set up:</description>
+      </item>
+      
     
   </channel>
 </rss>

@@ -168,12 +168,27 @@
   </url>
   
   <url>
+    <loc>https://merrimanlab.github.io/tags/reference/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/quickref/reference-resources/</loc>
     <lastmod>2020-09-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://merrimanlab.github.io/quickref/training-resources/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/tutorials/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/workshops/</loc>
     <lastmod>2020-09-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -199,6 +214,10 @@
   
   <url>
     <loc>https://merrimanlab.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/quickref/new-lab-member/</loc>
   </url>
   
 </urlset>
