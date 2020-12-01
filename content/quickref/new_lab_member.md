@@ -33,6 +33,8 @@ A (sort of) induction for new members to the lab to help them get up and running
 - invited to lab Slack
 - [merrimanlab.github.io](https://merrimanlab.github.io)
 
+[merrimanlab.github.io](https://merrimanlab.github.io) is a collation of many how-to's for the lab as well and provides some reference material. It's purpose is to supplement knowledge after asking a question.
+
 
 ## Computer access
 
