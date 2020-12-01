@@ -3,8 +3,8 @@ title: Training Resources
 author: Murray Cadzow
 date: '2020-09-14'
 slug: training-resources
-categories: []
-tags: ["R"]
+categories: ["howto"]
+tags: ["howto", "tutorials","workshops","reference"]
 weight: 0
 enableToc: yes
 tocLevels:
