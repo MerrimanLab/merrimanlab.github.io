@@ -33,17 +33,6 @@ Scroll through page-wise As you may already know, you can use &amp;lt;space&amp;
         <description>Config files, sometimes referred to as dot-files, are files that you can make to customise the way a program behaves. Two such files you might like to create are .bashrc to customise how your bash looks and behaves, and .Rprofile to customise how R looks and behaves. Usually these files live in you home directory (~/) and because they have a &amp;lsquo;.&amp;rsquo; at the start are hidden from view by default but in bash you can view these hidden files with ls -A ~/.</description>
       </item>
       
-      <item>
-        <title>ssh config</title>
-        <link>https://merrimanlab.github.io/post/ssh-config/</link>
-        <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://merrimanlab.github.io/post/ssh-config/</guid>
-        <description>This post is about setting up an ssh config to make logging into remote machines easier.
-It&amp;rsquo;s based on the setup that is required for logging into NeSI (https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup)
- In a new local terminal run; mkdir -p ~/.ssh/sockets this will create a hidden file in your home directory to store socket configurations. Open your ssh config file with nano ~/.ssh/config and add the following (replacing  with your username):  Host * ControlMaster auto ControlPath ~/.</description>
-      </item>
-      
     
   </channel>
 </rss>
