@@ -1769,9 +1769,11 @@
   <article class="single__contents" data-dir="ltr">
     <p>Config files, sometimes referred to as dot-files, are files that you can make to customise the way a program behaves. Two such files you might like to create are <code>.bashrc</code> to customise how your bash looks and behaves, and <code>.Rprofile</code> to customise how R looks and behaves. Usually these files live in you home directory (<code>~/</code>) and because they have a &lsquo;.&rsquo; at the start are hidden from view by default but in bash you can view these hidden files with <code>ls -A ~/</code>.</p>
 <h1 id="bash">Bash</h1>
+<h2 id="bash-profile-for-login">Bash profile for login</h2>
 <p><code>.bashrc</code> is the common file that controls your bash set up. Some systems (such as MacOS) also have a file <code>.bash_profile</code>. If your system uses the <code>.bash_profile</code> file, you can make it refer to <code>.bashrc</code> by having this as the contents of <code>.bash_profile</code>:</p>
 <pre><code>[[ -r ~/.bashrc ]] &amp;&amp; . ~/.bashrc
-</code></pre><h2 id="custom-prompt">Custom prompt</h2>
+</code></pre><p>In the <code>.bashrc</code> file it is useful to set a customised prompt, set variables that are useful - e.g. <code>MODULEPATH</code> to define where <code>module</code> looks for installed software - and set up some custom commands (aliases) to make common tasks easier.</p>
+<h3 id="custom-prompt">Custom prompt</h3>
 <p>Creating your own prompt in bash can be really useful rather than having a straight <code>$</code>. <a href="http://ezprompt.net">http://ezprompt.net</a> provides a nice way of modifying your prompt and providing the code to add to your <code>.bashrc</code>.</p>
 <p>Things you might want to do:</p>
 <ul>
@@ -1781,22 +1783,23 @@
 <li>add the full path to the current directory</li>
 <li>have colour</li>
 </ul>
-<h2 id="exported-variables">Exported variables</h2>
+<h3 id="exported-variables">Exported variables</h3>
 <p>Exporting variables is a useful way for defining environmental settings. Often this is setting a bash variable to tell programs where to look for things. This website has a few examples of bash variables (<a href="https://www.thegeekstuff.com/2010/08/bash-shell-builtin-commands/)">https://www.thegeekstuff.com/2010/08/bash-shell-builtin-commands/)</a>.</p>
-<h3 id="module-example">Module example</h3>
+<p>It is useful to include the <code>MODULEAPTH</code> and <code>RSTUDIO_PANDOC</code> variables below.</p>
+<h4 id="setting-modulepath-for-module">Setting <code>MODULEPATH</code> for <code>module</code></h4>
 <p>For instance on the server to be able to make use of the <code>module</code> system, you&rsquo;ll need to add to you <code>.bashrc</code> file:</p>
 <pre><code>export MODULEPATH=/Volumes/scratch/software/modules:$MODULEPATH
 </code></pre><p>This lets <code>module</code> know where to look for the software modules that are installed/configured.</p>
-<h3 id="rmarkdown-pandoc">Rmarkdown Pandoc</h3>
+<h4 id="rmarkdown-pandoc">Rmarkdown Pandoc</h4>
 <p>A useful one on the server, is defining where R is going to look for pandoc for compiling RMarkdown documents.</p>
 <p>I have the following in my <code>.bashrc</code> file</p>
 <pre><code>export RSTUDIO_PANDOC=/usr/lib/rstudio-server/bin/pandoc
 </code></pre><p>When I then open R on the server, the value of that variable is then passed and set to the equivalent in R, and R then knows that I want to use <code>pandoc</code> found at that path. This is important because there might be another instance of <code>pandoc</code> that is available on your <em>PATH</em>. <em>RSTUDIO_PANDOC</em> is the name that R has specified to use if you want to customise which <code>pandoc</code> is used.</p>
-<h3 id="better-bash-history">Better bash history</h3>
+<h4 id="better-bash-history">Better bash history</h4>
 <p>Bash records your history as it goes but if you are operating across multiple windows it doesn&rsquo;t work the way you would hope for - e.g. it is only recorded from a single given session, even if you work in multiple. <em>PROMPT_COMMAND</em> is a bash variable that is run as part of running commands. This particular one is designed to time and date stamp commands (not run as root) and their working directory into a daily log file. The logs live in <code>~/.logs/</code> so this needs to be made for the command to run <code>mkdir -p ~/.logs</code>.</p>
 <pre><code>export PROMPT_COMMAND='if [ &quot;$(id -u)&quot; -ne 0 ]; then echo &quot;$(date &quot;+%Y-%m-%d.%H:%M:%S&quot;) $(pwd) $(history 1)&quot; &gt;&gt; ~/.logs/bash-history-$(date &quot;+%Y-%m-%d&quot;).log; fi'
 </code></pre><p>If I want to search my logs I can use <code>grep &lt;command&gt; ~/.logs/*</code> and it will tell me all the times and directories I ran a command, and how I ran it. The history in these log files is made up of all commands you run on the computer, regardless of how many terminal windows you have open.</p>
-<h2 id="aliases">Aliases</h2>
+<h3 id="aliases">Aliases</h3>
 <p>Aliases can be quite useful for common commands and arguments you run.</p>
 <p>For instance I have aliases set up to ssh onto the server and connect to a tmux session if one is already running.</p>
 <pre><code>alias merritmux1='ssh -t biocmerriserver1 tmux attach'
@@ -1818,7 +1821,7 @@ Host biochemcompute
    ForwardX11Trusted yes
    ServerAliveInterval 300
    ServerAliveCountMax 2
-</code></pre><h2 id="ssh-config"><code>ssh</code> Config</h2>
+</code></pre><h2 id="creating-a-ssh-config">Creating a <code>ssh</code> Config</h2>
 <p>You can add additional host entries by copying that of biochemcompute and modifying <code>Host</code> and <code>HostName</code> for the other servers you wish to be able to log into.</p>
 <ol start="3">
 <li>
@@ -1920,16 +1923,20 @@ options(Ncpus = 8)
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#custom-prompt">Custom prompt</a></li>
-    <li><a href="#exported-variables">Exported variables</a>
+    <li><a href="#bash-profile-for-login">Bash profile for login</a>
       <ul>
-        <li><a href="#module-example">Module example</a></li>
-        <li><a href="#rmarkdown-pandoc">Rmarkdown Pandoc</a></li>
-        <li><a href="#better-bash-history">Better bash history</a></li>
+        <li><a href="#custom-prompt">Custom prompt</a></li>
+        <li><a href="#exported-variables">Exported variables</a>
+          <ul>
+            <li><a href="#setting-modulepath-for-module">Setting <code>MODULEPATH</code> for <code>module</code></a></li>
+            <li><a href="#rmarkdown-pandoc">Rmarkdown Pandoc</a></li>
+            <li><a href="#better-bash-history">Better bash history</a></li>
+          </ul>
+        </li>
+        <li><a href="#aliases">Aliases</a></li>
       </ul>
     </li>
-    <li><a href="#aliases">Aliases</a></li>
-    <li><a href="#ssh-config"><code>ssh</code> Config</a></li>
+    <li><a href="#creating-a-ssh-config">Creating a <code>ssh</code> Config</a></li>
   </ul>
 
   <ul>
