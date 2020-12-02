@@ -17,14 +17,19 @@ Config files, sometimes referred to as dot-files, are files that you can make to
 
 # Bash
 
+
+## Bash profile for login
+
 `.bashrc` is the common file that controls your bash set up. Some systems (such as MacOS) also have a file `.bash_profile`. If your system uses the `.bash_profile` file, you can make it refer to `.bashrc` by having this as the contents of `.bash_profile`:
 
 ```
 [[ -r ~/.bashrc ]] && . ~/.bashrc
 ```
 
+In the `.bashrc` file it is useful to set a customised prompt, set variables that are useful - e.g. `MODULEPATH` to define where `module` looks for installed software - and set up some custom commands (aliases) to make common tasks easier.
 
-## Custom prompt
+
+### Custom prompt
 
 Creating your own prompt in bash can be really useful rather than having a straight `$`. http://ezprompt.net provides a nice way of modifying your prompt and providing the code to add to your `.bashrc`.
 
@@ -35,12 +40,14 @@ Things you might want to do:
 - add the full path to the current directory
 - have colour
 
-## Exported variables
+### Exported variables
 
 Exporting variables is a useful way for defining environmental settings. Often this is setting a bash variable to tell programs where to look for things. This website has a few examples of bash variables (https://www.thegeekstuff.com/2010/08/bash-shell-builtin-commands/).
 
+It is useful to include the `MODULEAPTH` and `RSTUDIO_PANDOC` variables below.
 
-### Module example
+
+#### Setting `MODULEPATH` for `module`
 
 For instance on the server to be able to make use of the `module` system, you'll need to add to you `.bashrc` file:
 ```
@@ -48,7 +55,7 @@ export MODULEPATH=/Volumes/scratch/software/modules:$MODULEPATH
 ```
 This lets `module` know where to look for the software modules that are installed/configured.
 
-### Rmarkdown Pandoc
+#### Rmarkdown Pandoc
 
 A useful one on the server, is defining where R is going to look for pandoc for compiling RMarkdown documents.
 
@@ -58,7 +65,7 @@ export RSTUDIO_PANDOC=/usr/lib/rstudio-server/bin/pandoc
 ```
 When I then open R on the server, the value of that variable is then passed and set to the equivalent in R, and R then knows that I want to use `pandoc` found at that path. This is important because there might be another instance of `pandoc` that is available on your _PATH_. _RSTUDIO_PANDOC_ is the name that R has specified to use if you want to customise which `pandoc` is used.
 
-### Better bash history
+#### Better bash history
 
 Bash records your history as it goes but if you are operating across multiple windows it doesn't work the way you would hope for - e.g. it is only recorded from a single given session, even if you work in multiple. _PROMPT_COMMAND_ is a bash variable that is run as part of running commands. This particular one is designed to time and date stamp commands (not run as root) and their working directory into a daily log file. The logs live in `~/.logs/` so this needs to be made for the command to run `mkdir -p ~/.logs`.
 
@@ -67,7 +74,7 @@ export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:
 ```
 If I want to search my logs I can use `grep <command> ~/.logs/*` and it will tell me all the times and directories I ran a command, and how I ran it. The history in these log files is made up of all commands you run on the computer, regardless of how many terminal windows you have open.
 
-## Aliases
+### Aliases
 
 Aliases can be quite useful for common commands and arguments you run.
 
@@ -99,7 +106,7 @@ Host biochemcompute
    ServerAliveCountMax 2
 ```
 
-## `ssh` Config
+## Creating a `ssh` Config
 
 You can add additional host entries by copying that of biochemcompute and modifying `Host` and `HostName` for the other servers you wish to be able to log into.
 
