@@ -47,6 +47,7 @@ A (sort of) induction for new members to the lab to help them get up and running
   - added to lab Org
 
 
+
 ### Computer setup
 
 Once local computer and Biochem accounts have been set up:
@@ -61,6 +62,8 @@ Once local computer and Biochem accounts have been set up:
 - R and RStudio
   - make sure gets updated
 
+
+This post about [Config files](https://merrimanlab.github.io/post/config-files/) is extremely useful for reference in setting things up to be easier.
 
 Very useful introduction courses to get some base level skills that are needed 
 
