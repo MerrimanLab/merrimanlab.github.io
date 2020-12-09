@@ -31,7 +31,7 @@ Professor Tony Merriman:
   - [Github](https://github.com/rikutakei)
 - [Dr Murray Cadzow](https://www.otago.ac.nz/healthsciences/expertise/profile/index.html?id=3137)
   - [Github](https://github.com/murraycadzow)
-- Ashley Frewen
+- Ashleigh Frewen
 
 
 ## Research Fellows
@@ -67,4 +67,4 @@ Professor Tony Merriman:
 - James Boocock (MSc student)
 - Hakimeh Azimi (MSc student)
 - Tahzeeb Fatima Awais (PhD student)
-- Humaira Rasheed (Phd Student)
+- Humaira Rasheed (PhD Student)
