@@ -73,6 +73,18 @@ Rather than generating separate LZ plots for each summary data and compare them,
       </item>
       
       <item>
+        <title>Working with UK Biobank</title>
+        <link>https://merrimanlab.github.io/docs/ukbiobank-genomic-data/</link>
+        <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/docs/ukbiobank-genomic-data/</guid>
+        <description>Load modules for processing VCFs These programs are usually all needed in order to do analysis with the UK Biobank genetic data.
+module load bgenix/bgenix-1.1.8 module load bcftools/bcftools-1.11 The format for most analysis will follow this conversion:
+bgen -&amp;gt; vcf -&amp;gt; bed/bim/fam (plink)
+Extract and convert from bgen to VCF Extract region or SNP This command will extract out a region from the bgen file and turn it into a vcf</description>
+      </item>
+      
+      <item>
         <title>More on less</title>
         <link>https://merrimanlab.github.io/post/2020-10-20-less/</link>
         <pubDate>Tue, 20 Oct 2020 13:37:24 +1300</pubDate>
