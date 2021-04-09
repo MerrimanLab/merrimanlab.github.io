@@ -21,4 +21,3 @@ We recommend you to generate a skeleton (R)markdown file via R/RStudio (`blogdow
 Once you have finished writing your post, make sure to set `draft: false` in the header (if it exists) and save it in one of the two places in this repository:
 1. In the `draft` directory, where it will be moved to appropriate directory after merging
 1. In the correct directory in the `content` directory, if you know where to put it
-
