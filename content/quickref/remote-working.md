@@ -124,11 +124,11 @@ Use any of these to use RStudio and operate on data that is stored on the XSan
 
 Put url in your web browser after connecting to VPN
 
-https://biochemcompute.otago.ac.nz:8787
-https://biochemcompute.otago.ac.nz:8787
+http://biochemcompute.otago.ac.nz:8787
+http://biochemcompute.otago.ac.nz:8787
 
-https://biocmerriserver1.otago.ac.nz:8787
-https://biocmerriserver2.otago.ac.nz:8787
+http://biocmerriserver1.otago.ac.nz:8787
+http://biocmerriserver2.otago.ac.nz:8787
 
 One of the limitations is that you can only have a single project open at a time and if you use a different server url it disconnects the current server and loads the project up in the new one (possible benefit if the server your start on starts to get used heaps you can migrate servers easily)
 
