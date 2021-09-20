@@ -5,7 +5,7 @@ author: "Murray Cadzow"
 draft: false
 weight: 0
 enableToc: true
-tags: ["bash", "howto","vcf"]
+tags: ["howto","vcf"]
 tocLevels: ["h2", "h3", "h4"]
 ---
 
