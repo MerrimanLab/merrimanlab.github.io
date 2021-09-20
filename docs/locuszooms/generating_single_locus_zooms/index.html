@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/">
@@ -1947,11 +1947,11 @@ Therefore, we recommend you to use rsID wherever possible to match with the 1000
 <p>To calculate the LD yourself, follow the code below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">bcftools view -r CHR:START-END /path/to/reference/chr/vcf.gz -Oz -o /path/to/output/tmp.vcf.gz
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bcftools view -r CHR:START-END /path/to/reference/chr/vcf.gz -Oz -o /path/to/output/tmp.vcf.gz
 plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-chr --ld-snp &lt;rsid-of-interest&gt; --ld-window-r2 <span class="m">0</span> --out /path/to/output/ld_file
 </code></pre></td></tr></table>
 </div>
@@ -1988,7 +1988,7 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
 <p>You will be able to run the following code and produce the same Locus Zoom plot using the example data set from the <a href="https://github.com/Geeketics/LocusZooms" target="_blank">GitHub repo</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2008,7 +2008,7 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Load necessary files into R</span>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Load necessary files into R</span>
 <span class="n">Example.assoc.linear</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&#34;Example.assoc.linear&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="n">Example.ld</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#34;Example.ld&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&#34;Example.genes&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
@@ -2035,7 +2035,7 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
 <p><em>This is not reproducible from the example data.</em></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2045,7 +2045,7 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">EUR_meta_full1_clean_rsid.nfiltered_chr7</span><span class="p">,</span>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">EUR_meta_full1_clean_rsid.nfiltered_chr7</span><span class="p">,</span>
            <span class="n">gene</span> <span class="o">=</span> <span class="s">&#34;MLXIPL&#34;</span><span class="p">,</span>
            <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
            <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList</span><span class="p">,</span>

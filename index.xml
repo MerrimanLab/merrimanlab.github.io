@@ -73,6 +73,16 @@ Rather than generating separate LZ plots for each summary data and compare them,
       </item>
       
       <item>
+        <title>Adding Annotations to VCFs</title>
+        <link>https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/</link>
+        <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/</guid>
+        <description>The main consideration is to make sure that the reference resource matches the genomic build of your VCF. i.e. make sure you are using GRCh37 resources for a GRCh37 aligned VCF, or GRCh38 resources for a GRCh38 aligned VCF.
+dbSNP A vcf from dbSNP can be used to annotate rsIDs into the ID column of a vcf. For instance the dbSNP v151 VCF can be downloaded here ftp://ftp.ncbi.nih.gov/snp/organisms/human_9606_b151_GRCh37p13/VCF/ - one key thing is make sure that you use the same genome build as your VCF that you want to annotate.</description>
+      </item>
+      
+      <item>
         <title>Working with UK Biobank</title>
         <link>https://merrimanlab.github.io/docs/ukbiobank-genomic-data/</link>
         <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>

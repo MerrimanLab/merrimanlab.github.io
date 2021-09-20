@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/ukbiobank-genomic-data/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/ukbiobank-genomic-data/">
@@ -1855,23 +1855,23 @@
   <article class="single__contents" data-dir="ltr">
     <h2 id="load-modules-for-processing-vcfs">Load modules for processing VCFs</h2>
 <p>These programs are usually all needed in order to do analysis with the UK Biobank genetic data.</p>
-<pre><code>module load bgenix/bgenix-1.1.8
+<pre tabindex="0"><code>module load bgenix/bgenix-1.1.8
 module load bcftools/bcftools-1.11
 </code></pre><p>The format for most analysis will follow this conversion:</p>
 <p>bgen -&gt; vcf -&gt; bed/bim/fam (plink)</p>
 <h2 id="extract-and-convert-from-bgen-to-vcf">Extract and convert from bgen to VCF</h2>
 <h3 id="extract-region-or-snp">Extract region or SNP</h3>
 <p>This command will extract out a region from the bgen file and turn it into a vcf</p>
-<pre><code>bgenix -g ukb_imp_chr${CHR}_v3.bgen \
+<pre tabindex="0"><code>bgenix -g ukb_imp_chr${CHR}_v3.bgen \
   -i ukb_imp_chr${CHR}_v3.bgen.bgi \
   -vcf -incl-range ${POS} | bgzip -c &gt; new_file.vcf.gz
 </code></pre><h3 id="add-on-correct-ids">Add on correct IDs</h3>
 <p>BUT the output isn&rsquo;t going to be of any use with the phenotypic data because the ids mean nothing, so we need to add on the correct ids</p>
-<pre><code>bcftools reheader -h bgen_to_vcf/new_header.txt \
+<pre tabindex="0"><code>bcftools reheader -h bgen_to_vcf/new_header.txt \
   -O z \
   -o new_file.reheadered.vcf.gz new_file.vcf.gz
 </code></pre><p>if dealing with chrX/chrXY use</p>
-<pre><code># chrX
+<pre tabindex="0"><code># chrX
 bcftools reheader -h bgen_to_vcf/new_header_chrX.txt \
   -O z \
   -o new_file.reheadered.vcf.gz new_file.vcf.gz
@@ -1882,13 +1882,13 @@ bcftools reheader -h bgen_to_vcf/new_header_chrX.txt \
   -o new_file.reheadered.vcf.gz new_file.vcf.gz
 </code></pre><h3 id="rename-contigs">Rename Contigs</h3>
 <p>The UK Biobank has the chromosomes 1-9 as 01-09 so in order to use them with other data we need to rename the contigs</p>
-<pre><code>bcftools annotate --rename-chrs bgen_to_vcf/rename_contigs.txt \
+<pre tabindex="0"><code>bcftools annotate --rename-chrs bgen_to_vcf/rename_contigs.txt \
   -o new_file.reheadered.renamed.vcf.gz \
   -O z new_file.reheadered.vcf.gz
 </code></pre><h2 id="bgen-to-vcf-in-one-step">Bgen to VCF in One Step</h2>
 <p>Remember if dealing with X or XY to switch the following commands to use the appropriate new header.</p>
 <h3 id="pull-out-range">Pull out range</h3>
-<pre><code>bgenix -g ukb_imp_chr${CHR}_v3.bgen \
+<pre tabindex="0"><code>bgenix -g ukb_imp_chr${CHR}_v3.bgen \
   -i ukb_imp_chr${CHR}_v3.bgen.bgi \
   -vcf -incl-range ${POS} | \
 bcftools reheader \
@@ -1897,7 +1897,7 @@ bcftools annotate \
   --rename-chrs bgen_to_vcf/rename_contigs.txt | \
 bgzip -c &gt; new_file.vcf.gz &amp;&amp; tabix -p vcf new_file.vcf.gz
 </code></pre><h3 id="pull-out-a-specific-marker">Pull out a specific marker</h3>
-<pre><code>bgenix -g ukb_imp_chr${CHR}_v3.bgen \
+<pre tabindex="0"><code>bgenix -g ukb_imp_chr${CHR}_v3.bgen \
   -i ukb_imp_chr${CHR}_v3.bgen.bgi \
   -vcf -incl-rsids ${RSID} | \
 bcftools reheader \
@@ -1907,19 +1907,19 @@ bcftools annotate \
 bgzip -c &gt; new_file.vcf.gz &amp;&amp; tabix -p vcf new_file.vcf.gz
 </code></pre><h2 id="using-ukbb-data-in-plink">Using UKBB data in plink</h2>
 <p>Refer to the <a href="https://www.cog-genomics.org/plink/1.9/" target="_blank">plink manual</a> for extra options or information on how to actually run plink.</p>
-<pre><code># Current as at Feb 2021
+<pre tabindex="0"><code># Current as at Feb 2021
 module load plink/plink1.9b6.21
 </code></pre><p>Convert from vcf to bed/bim/fam.</p>
-<pre><code>plink --vcf new_file.vcf.gz --make-bed --out new_file
+<pre tabindex="0"><code>plink --vcf new_file.vcf.gz --make-bed --out new_file
 </code></pre><p>At this stage it can also be useful to kick out extra samples, which can be done as part of the file conversion above</p>
-<pre><code># keep select people
+<pre tabindex="0"><code># keep select people
 plink --vcf new_file.vcf.gz --make-bed --out new_file --keep keep_list.txt
 
 # remove select people
 plink --vcf new_file.vcf.gz --make-bed --out new_file --remove remove_list.txt
 </code></pre><p>keep_list.txt or remove_list.txt is a text file with the columns (no header, and space delimited): <code>FID IID</code>.</p>
 <p>Then you can update the sex and affection in the fam file by using a covariate file made from the phenotypic data.</p>
-<pre><code>plink --vcf new_file.vcf.gz --out new_plink  --keep id_list.txt --pheno pheno_file.txt --pheno-name &lt;pheno_col_name&gt; --update-sex pheno_file.txt --make-bed
+<pre tabindex="0"><code>plink --vcf new_file.vcf.gz --out new_plink  --keep id_list.txt --pheno pheno_file.txt --pheno-name &lt;pheno_col_name&gt; --update-sex pheno_file.txt --make-bed
 </code></pre><p>Covariate file should have the following columns (has a header, space/tab delimited): <code>FID IID SEX</code> subsequent columns can be any phenotypes you like. <code>--update-sex</code> assumes the 3rd column is sex, but it can be specified (refer to plink documentation).</p>
 
   </article>

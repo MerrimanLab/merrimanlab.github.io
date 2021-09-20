@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/">
@@ -1867,7 +1867,7 @@
 <p>Since the LD can be calculated on-the-fly, if you have a vector of SNPs/genes/regions of interest, you will be able to create a simple loop like so:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1883,7 +1883,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-r" data-lang="r"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
 <span class="n">output_filenames</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">variants</span><span class="p">,</span> <span class="s">&#34;.jpg&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
 
 <span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">variants</span><span class="p">))</span> <span class="p">{</span>
@@ -1939,7 +1939,7 @@
 <p>The following code will generate LD for all the variants from a <code>plink</code> loci file in parallel:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1968,7 +1968,7 @@
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/bash
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/bash
 </span><span class="cp"></span>
 <span class="c1"># Script to generate LD of all the lead variants from plink loci output</span>
 <span class="c1"># Usage: bash /path/to/script plink.loci EUR ld_files</span>
@@ -2029,7 +2029,7 @@ cat <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</sp
 <p>Modify the loop as below:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2052,7 +2052,7 @@ cat <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</sp
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-r" data-lang="r"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
 
 <span class="c1"># Import LD info of the variants (you may want to re-write this in purrr, if you want to):</span>
 <span class="n">ld_files</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#39;path/to/ld/ancestry/&#39;</span><span class="p">,</span> <span class="n">variants</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>

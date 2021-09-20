@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 15 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Sep 2021 11:29:24 +1300</lastBuildDate>
     
         <atom:link href="https://merrimanlab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,20 +15,38 @@
     
       
       <item>
+        <title>bash</title>
+        <link>https://merrimanlab.github.io/tags/bash/</link>
+        <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/tags/bash/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>howto</title>
+        <link>https://merrimanlab.github.io/tags/howto/</link>
+        <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/tags/howto/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>vcf</title>
+        <link>https://merrimanlab.github.io/tags/vcf/</link>
+        <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/tags/vcf/</guid>
+        <description></description>
+      </item>
+      
+      <item>
         <title>UK Biobank</title>
         <link>https://merrimanlab.github.io/tags/uk-biobank/</link>
         <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/tags/uk-biobank/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>bash</title>
-        <link>https://merrimanlab.github.io/tags/bash/</link>
-        <pubDate>Tue, 20 Oct 2020 13:37:24 +1300</pubDate>
-        
-        <guid>https://merrimanlab.github.io/tags/bash/</guid>
         <description></description>
       </item>
       
@@ -92,15 +110,6 @@
         <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/tags/r/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>howto</title>
-        <link>https://merrimanlab.github.io/tags/howto/</link>
-        <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>https://merrimanlab.github.io/tags/howto/</guid>
         <description></description>
       </item>
       

@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/post/find_file_in_dir/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/post/find_file_in_dir/">
@@ -1057,6 +1057,29 @@
   </h6>
   <ul>
     
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
+    <a href="https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/"
+      class="menu__title ">Adding Annotations to VCFs</a>
+  </li>
+  
+
     
       
   
@@ -1616,6 +1639,29 @@
   
   
   <li class="">
+    <a href="https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/"
+      class="menu__title ">Adding Annotations to VCFs</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
     <a href="https://merrimanlab.github.io/post/2020-10-20-less/"
       class="menu__title ">More on less</a>
   </li>
@@ -1772,16 +1818,16 @@ listed, evaluating an <code>expression</code> (composed of the &ldquo;primaries&
 </blockquote>
 <h2 id="search-for-a-file-under-a-directory">Search for a file under a directory</h2>
 <p>You can search for a file with specific name like so:</p>
-<pre><code class="language-{bash}" data-lang="{bash}">find /path/to/search -name &lt;name of file/dir&gt;
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">find /path/to/search -name &lt;name of file/dir&gt;
 </code></pre><p>The default <code>path</code> to search is the current directory <code>.</code>, and it will search recursively until the very end.</p>
 <h2 id="limit-your-search-to-n-depth">Limit your search to N-depth</h2>
 <p>You may know how &ldquo;deep&rdquo; your file/directory is buried in your home directory, and it may be unnecessary to search recursively down to the bottom.</p>
 <p>You should add the <code>-maxdepth &lt;N&gt;</code> option to your <code>find</code> command to limit the search depth:</p>
-<pre><code class="language-{bash}" data-lang="{bash}">find /path/to/search -maxdepth 3 -name &lt;name of file/dir&gt;
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">find /path/to/search -maxdepth 3 -name &lt;name of file/dir&gt;
 </code></pre><p>The above command will search at most three directories below <code>/path/to/search</code>.</p>
 <h2 id="limit-your-serach-to-specific-type-of-files">Limit your serach to specific type of files</h2>
 <p>If you want to limit your search to a specific type of file (e.g. only care about directories), then modify the command as below:</p>
-<pre><code class="language-{bash}" data-lang="{bash}">find /path/to/search -type d -name &lt;name of file/dir&gt;
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">find /path/to/search -type d -name &lt;name of file/dir&gt;
 </code></pre><p>The option <code>-type &lt;type&gt;</code> will limit the search on directories.</p>
 <p>Here is a list of other types you may find useful:</p>
 <table>

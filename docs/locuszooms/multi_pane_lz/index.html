@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/locuszooms/multi_pane_lz/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/locuszooms/multi_pane_lz/">
@@ -1865,13 +1865,13 @@
 <p>In order to use multiple summary data for LZ, you have to pass the data sets as a <code>list</code>, rather than a <code>data.frame</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-r" data-lang="r"><span class="n">data1</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data1.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">data1</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data1.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
 <span class="n">data2</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data2.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
 
 <span class="n">all_data</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">data1</span> <span class="o">=</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span><span class="p">)</span>
@@ -1883,7 +1883,7 @@
 <p>Once the data sets are in a list variable, you can pass this list to the <code>locus.zoom()</code> function as before, but with the extra <code>nplots = TRUE</code> argument:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1892,7 +1892,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">,</span>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">,</span>
 	   <span class="n">snp</span> <span class="o">=</span> <span class="s">&#34;rs1121980&#34;</span><span class="p">,</span>
 	   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
 	   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
