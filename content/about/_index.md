@@ -31,7 +31,7 @@ Professor Tony Merriman:
   - [Github](https://github.com/rikutakei)
 - [Dr Murray Cadzow](https://www.otago.ac.nz/healthsciences/expertise/profile/index.html?id=3137)
   - [Github](https://github.com/murraycadzow)
-- Ashleigh Frewen
+
 
 
 ## Research Fellows
@@ -48,7 +48,6 @@ Professor Tony Merriman:
 ## PhD students
 
 - Jaye Moors
-- [Amara Shaukat](https://github.com/Amara-Shaukat)
 - Kerasoma Leaupepe
 - Nick Sumpter
 
@@ -61,6 +60,7 @@ Professor Tony Merriman:
 
 ## Past members
 
+- Ashleigh Frewen (Staff)
 - Matt Bixley (Staff)
 - Edana Lord (Staff)
 - Callum Tanner (Staff)
@@ -68,3 +68,4 @@ Professor Tony Merriman:
 - Hakimeh Azimi (MSc student)
 - Tahzeeb Fatima Awais (PhD student)
 - Humaira Rasheed (PhD Student)
+- [Amara Shaukat](https://github.com/Amara-Shaukat) (PhD Student)
