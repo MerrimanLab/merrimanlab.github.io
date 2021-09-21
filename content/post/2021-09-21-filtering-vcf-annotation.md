@@ -1,5 +1,5 @@
 ---
-title: "Adding Annotations to VCFs"
+title: "Filtering VCF Annotations"
 date: 2021-09-21T11:29:24+13:00
 author: "Murray Cadzow"
 draft: false
