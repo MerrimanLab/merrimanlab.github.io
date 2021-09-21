@@ -15,15 +15,6 @@
     
       
       <item>
-        <title>bash</title>
-        <link>https://merrimanlab.github.io/tags/bash/</link>
-        <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
-        
-        <guid>https://merrimanlab.github.io/tags/bash/</guid>
-        <description></description>
-      </item>
-      
-      <item>
         <title>howto</title>
         <link>https://merrimanlab.github.io/tags/howto/</link>
         <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
@@ -47,6 +38,15 @@
         <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
         
         <guid>https://merrimanlab.github.io/tags/uk-biobank/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>bash</title>
+        <link>https://merrimanlab.github.io/tags/bash/</link>
+        <pubDate>Tue, 20 Oct 2020 13:37:24 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/tags/bash/</guid>
         <description></description>
       </item>
       

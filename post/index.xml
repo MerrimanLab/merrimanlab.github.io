@@ -16,6 +16,16 @@
       
       <item>
         <title>Adding Annotations to VCFs</title>
+        <link>https://merrimanlab.github.io/post/2021-09-21-filtering-vcf-annotation/</link>
+        <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/2021-09-21-filtering-vcf-annotation/</guid>
+        <description>example.vcf.gz is a VCF file of three human subjects aligned to GRCh37 and varaint called following the GATK best practices that had been annotated with rsIDs from dbSNP v151 and further annotated using dbNSFP4.0a and snpEff so includes annotations such as:
+ Allele Frequencies for variants from public databases 1000 Genomes, ExACm gnomad, etc functional annotations: missense, intron, 3&#39;/5&#39; UTR, etc gene names  In order to create it refer to the adding VCF annotations howto</description>
+      </item>
+      
+      <item>
+        <title>Adding Annotations to VCFs</title>
         <link>https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/</link>
         <pubDate>Tue, 21 Sep 2021 11:29:24 +1300</pubDate>
         
