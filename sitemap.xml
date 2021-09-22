@@ -38,8 +38,33 @@
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/post/2021-09-21-filtering-vcf-annotation/</loc>
-    <lastmod>2021-09-21T11:29:24+13:00</lastmod>
+    <loc>https://merrimanlab.github.io/post/2021-09-22-conda-environments/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/howto/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/python/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/reference/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/</loc>
+    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,17 +73,7 @@
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/tags/howto/</loc>
-    <lastmod>2021-09-21T11:29:24+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/post/</loc>
-    <lastmod>2021-09-21T11:29:24+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/</loc>
+    <loc>https://merrimanlab.github.io/post/2021-09-21-filtering-vcf-annotation/</loc>
     <lastmod>2021-09-21T11:29:24+13:00</lastmod>
   </url>
   
@@ -179,11 +194,6 @@
   
   <url>
     <loc>https://merrimanlab.github.io/tags/eqtl/</loc>
-    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/reference/</loc>
     <lastmod>2020-09-14T00:00:00+00:00</lastmod>
   </url>
   
