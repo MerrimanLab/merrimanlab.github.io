@@ -65,7 +65,7 @@ A system/user environment would be activated like this:
 conda activate base
 ```
 
-If a directory has a specific environment to be used, it is convention for it to be in `./envs/` within your working directory, refer to the section on [creating directory specific environments](#create-dir-env).
+If a directory has a specific environment to be used, it is convention for it to be in `./envs/` within your working directory, refer to the section on [creating directory specific environments](#directory-level).
 A directory specific environment would be activated like this:
 ```
 # activate a directory specific environment
@@ -104,7 +104,7 @@ You can also create environments with specific package versions:
 conda create --name <environment_name> <package>=<version>
 ```
 
-#### Directory level {#create-dir-env}
+#### Directory level
 
 
 Creating directory specific environments is essentially the same as creating system or user environments, except instead of the `--name` flag, you use `--prefix` and provide the directory name of where you want to install it into - usually `./envs/`. One of the benefits of using directory specific environments is that anyone that can access the directory will be able to use the environment that is specifically designed for that directory.
