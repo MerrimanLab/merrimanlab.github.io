@@ -1974,7 +1974,7 @@ module load miniconda/Miniconda3_4.8.3
 <p>A system/user environment would be activated like this:</p>
 <pre tabindex="0"><code># activate an environment called &quot;base&quot;
 conda activate base
-</code></pre><p>If a directory has a specific environment to be used, it is convention for it to be in <code>./envs/</code> within your working directory, refer to the section on <a href="/create-dir-env">creating directory specific environments</a>.<br />
+</code></pre><p>If a directory has a specific environment to be used, it is convention for it to be in <code>./envs/</code> within your working directory, refer to the section on <a href="/#create-dir-env">creating directory specific environments</a>.<br />
 A directory specific environment would be activated like this:</p>
 <pre tabindex="0"><code># activate a directory specific environment
 conda activate ./envs
@@ -1989,7 +1989,7 @@ conda activate ./envs
 <pre tabindex="0"><code>conda install --name &lt;environment_name&gt; &lt;packages&gt;
 </code></pre><p>You can also create environments with specific package versions:</p>
 <pre tabindex="0"><code>conda create --name &lt;environment_name&gt; &lt;package&gt;=&lt;version&gt;
-</code></pre><h4 id="directory-level--create-dir-env">Directory level {# create-dir-env}</h4>
+</code></pre><h4 id="create-dir-env">Directory level</h4>
 <p>Creating directory specific environments is essentially the same as creating system or user environments, except instead of the <code>--name</code> flag, you use <code>--prefix</code> and provide the directory name of where you want to install it into - usually <code>./envs/</code>. One of the benefits of using directory specific environments is that anyone that can access the directory will be able to use the environment that is specifically designed for that directory.</p>
 <pre tabindex="0"><code>conda create --prefix ./envs &lt;packages&gt;
 </code></pre><h3 id="deactivating-an-environment">Deactivating an environment</h3>
@@ -2045,7 +2045,7 @@ conda activate ./envs
           <ul>
             <li><a href="#system-level">System level</a></li>
             <li><a href="#user-level">User level</a></li>
-            <li><a href="#directory-level--create-dir-env">Directory level {# create-dir-env}</a></li>
+            <li><a href="#create-dir-env">Directory level</a></li>
           </ul>
         </li>
         <li><a href="#deactivating-an-environment">Deactivating an environment</a></li>
