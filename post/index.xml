@@ -7,12 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Sep 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://merrimanlab.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>github config</title>
+        <link>https://merrimanlab.github.io/post/2021-09-24-github-config/</link>
+        <pubDate>Fri, 24 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://merrimanlab.github.io/post/2021-09-24-github-config/</guid>
+        <description>From August, github removed the use of authentication for https when using git.
+If you had cloned repositories using https rather than ssh you will have issues with pulling and pushing to github.
+For documentation about how to change to using ssh to authenticate with github please see https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+Once set up, you will then need to either re-clone the repositories (possibly the easiest method), or go through each repository on your computer and update the remotes so they use ssh rather than https.</description>
+      </item>
       
       <item>
         <title>Conda environments</title>

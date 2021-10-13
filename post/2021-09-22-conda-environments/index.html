@@ -1078,6 +1078,29 @@
   
   
   
+  <li class="">
+    <a href="https://merrimanlab.github.io/post/2021-09-24-github-config/"
+      class="menu__title ">github config</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
   <li class="active">
     <a href="https://merrimanlab.github.io/post/2021-09-22-conda-environments/"
       class="menu__title active">Conda environments</a>
@@ -1688,6 +1711,29 @@
   
   
   
+  <li class="">
+    <a href="https://merrimanlab.github.io/post/2021-09-24-github-config/"
+      class="menu__title ">github config</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
   <li class="active">
     <a href="https://merrimanlab.github.io/post/2021-09-22-conda-environments/"
       class="menu__title active">Conda environments</a>
@@ -1912,11 +1958,8 @@ module load miniconda/Miniconda3_4.8.3
 </code></pre><h2 id="conda-environments">Conda environments</h2>
 <p>Conda is a package manager that can make running software that requires specific versions of software easier to install and manage.</p>
 <p>Essentially, conda lets you define an environment with all the dependencies of the software taken care of and then when you want to use the software, you load the environment. This prevents clashes from the global operating system having different versions installed/updated.</p>
-<h3 id="activate-and-environment">Activate and environment</h3>
-<p>In order to<br />
-Activate the environment</p>
-<pre tabindex="0"><code>conda activate {env name}
-</code></pre><p>You can activate multiple environments to build up to a certain environment if you wish too. To do this activate each environment sequentially. Usually it is more convenient to create a single environment with the needed packages.</p>
+<p>Full documentation on managing conda environments can be found at <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a></p>
+<p>There are two main types of environment that I would deem &ldquo;globally accessible&rdquo; (installed at a system or user level) or &ldquo;directory specific&rdquo; (installed into a specific directory).</p>
 <h3 id="listing-existing-environments">Listing existing environments</h3>
 <p>Environments are available from three main locations:</p>
 <ul>
@@ -1926,13 +1969,30 @@ Activate the environment</p>
 </ul>
 <p>In order to see which environments are already installed and available to you use the following command:</p>
 <pre tabindex="0"><code>conda env list
-</code></pre><p>Once you know which existing environment you want to use, activate it using either the name or path</p>
+</code></pre><h3 id="activate-and-environment">Activate and environment</h3>
+<p>Once you know which existing environment you want to use, activate it using either the name or path</p>
+<p>A system/user environment would be activated like this:</p>
 <pre tabindex="0"><code># activate an environment called &quot;base&quot;
 conda activate base
-</code></pre><h3 id="creating-your-own">Creating your own</h3>
+</code></pre><p>If a directory has a specific environment to be used, it is convention for it to be in <code>./envs/</code> within your working directory, refer to the section on <a href="/create-dir-env">creating directory specific environments</a>.<br />
+A directory specific environment would be activated like this:</p>
+<pre tabindex="0"><code># activate a directory specific environment
+conda activate ./envs
+</code></pre><p>You can activate multiple environments to build up to a certain environment if you wish too. To do this activate each environment sequentially. Usually it is more convenient to create a single environment with the needed packages.</p>
+<h3 id="creating-your-own">Creating your own</h3>
+<h4 id="system-level">System level</h4>
+<p>System level environments can only be created/modified by admins.</p>
 <h4 id="user-level">User level</h4>
-<h4 id="directory-level">Directory level</h4>
-<h3 id="deactivating-an-environment">Deactivating an environment</h3>
+<p>User level environments are very useful if there is a set of common packages you use together often. When these are created they get stored within your home directory which means that other users won&rsquo;t be able to access them.</p>
+<pre tabindex="0"><code>conda create --name &lt;environment_name&gt; &lt;packages&gt;
+</code></pre><p>If you want to add packages later you can use</p>
+<pre tabindex="0"><code>conda install --name &lt;environment_name&gt; &lt;packages&gt;
+</code></pre><p>You can also create environments with specific package versions:</p>
+<pre tabindex="0"><code>conda create --name &lt;environment_name&gt; &lt;package&gt;=&lt;version&gt;
+</code></pre><h4 id="directory-level--create-dir-env">Directory level {# create-dir-env}</h4>
+<p>Creating directory specific environments is essentially the same as creating system or user environments, except instead of the <code>--name</code> flag, you use <code>--prefix</code> and provide the directory name of where you want to install it into - usually <code>./envs/</code>. One of the benefits of using directory specific environments is that anyone that can access the directory will be able to use the environment that is specifically designed for that directory.</p>
+<pre tabindex="0"><code>conda create --prefix ./envs &lt;packages&gt;
+</code></pre><h3 id="deactivating-an-environment">Deactivating an environment</h3>
 <p>To make an activated environment inaccessible to your session use</p>
 <pre tabindex="0"><code>conda deactivate
 </code></pre>
@@ -1943,6 +2003,13 @@ conda activate base
 <div class="grow"></div>
 <nav class="pagination-single">
   
+    
+      <a href="https://merrimanlab.github.io/post/2021-09-24-github-config/" title="github config" class="pagination-single__left">
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+        </div>
+        <div class="pagination-single__right-title">github config</div>
+      </a>
     
     <div class="grow"></div>
     
@@ -1972,12 +2039,13 @@ conda activate base
     <li><a href="#using-conda-on-the-server">Using Conda on the server</a></li>
     <li><a href="#conda-environments">Conda environments</a>
       <ul>
-        <li><a href="#activate-and-environment">Activate and environment</a></li>
         <li><a href="#listing-existing-environments">Listing existing environments</a></li>
+        <li><a href="#activate-and-environment">Activate and environment</a></li>
         <li><a href="#creating-your-own">Creating your own</a>
           <ul>
+            <li><a href="#system-level">System level</a></li>
             <li><a href="#user-level">User level</a></li>
-            <li><a href="#directory-level">Directory level</a></li>
+            <li><a href="#directory-level--create-dir-env">Directory level {# create-dir-env}</a></li>
           </ul>
         </li>
         <li><a href="#deactivating-an-environment">Deactivating an environment</a></li>

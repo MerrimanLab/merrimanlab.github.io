@@ -38,32 +38,42 @@
   </url>
   
   <url>
+    <loc>https://merrimanlab.github.io/tags/git/</loc>
+    <lastmod>2021-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/2021-09-24-github-config/</loc>
+    <lastmod>2021-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/howto/</loc>
+    <lastmod>2021-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/post/</loc>
+    <lastmod>2021-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/reference/</loc>
+    <lastmod>2021-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://merrimanlab.github.io/tags/</loc>
+    <lastmod>2021-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://merrimanlab.github.io/post/2021-09-22-conda-environments/</loc>
     <lastmod>2021-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://merrimanlab.github.io/tags/howto/</loc>
-    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/post/</loc>
-    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://merrimanlab.github.io/tags/python/</loc>
-    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/reference/</loc>
-    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/</loc>
     <lastmod>2021-09-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -119,11 +129,6 @@
   
   <url>
     <loc>https://merrimanlab.github.io/post/2020-10-16-beyond-swc-git/</loc>
-    <lastmod>2020-10-16T10:14:49+13:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://merrimanlab.github.io/tags/git/</loc>
     <lastmod>2020-10-16T10:14:49+13:00</lastmod>
   </url>
   
