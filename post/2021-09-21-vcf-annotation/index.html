@@ -14,9 +14,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script>
   "use strict";
@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/post/2021-09-21-vcf-annotation/">
@@ -1967,7 +1967,7 @@ bcftools annotate -a dbsnp_151_20180423.vcf.gz -c ID -o myvcf.dbsnp_annotated.vc
 unzip dbNSFP4.0a.zip
 </code></pre><p>The file has GRCh38 coordinates as the default, so to change them you need this perl script <a href="https://raw.githubusercontent.com/pcingola/SnpEff/master/scripts_build/dbNSFP_sort.pl" target="_blank">dbNSFP_sort.pl</a> and the GRCh37 coordinates are columns 8 and 9, but the script is zero indexed hence using 7 and 8 as the column numbers.</p>
 <pre tabindex="0"><code># Set to your downloaded dbNSFP version
-version=&quot;4.0a&quot;
+version=&#34;4.0a&#34;
 
 # Replace coordinates by columns 7 and 8 (hg19 coordinates) and sort by those coordinates
 zcat dbNSFP${version}_variant.chr*.gz | dbNSFP_sort.pl 7 8 &gt; dbNSFP4.0a_hg19.txt
@@ -1982,7 +1982,7 @@ tabix -s 1 -b 2 -e 2 dbNSFP${version}_hg19.txt.gz
 <p>To perform the annotation, we use <code>SnpSift</code> which comes as part of <code>snpEff</code>.</p>
 <pre tabindex="0"><code>module load snpEff/snpEff_4.3t
 
-java -jar $SNPSIFT dbnsfp -db dbNSFP4.0a_hg19.txt.gz -f $(zcat /Volumes/archive/merrimanlab/reference_files/dbNSFP/dbNSFP4.0a/dbNSFP4.0a_hg19.txt.gz | head -1 | tr &quot;\t&quot; &quot;\n&quot; | grep -v &quot;hg18\|hg19\|Geuvadis_eQTL_target_gene&quot; | sed -n 5,&quot;$&quot;p | tr &quot;\n&quot; &quot;\,&quot; |sed &quot;s/,$//g&quot;) myvcf.vcf.gz | bgzip -c &gt; myvcf.dbnsfp.vcf.gz
+java -jar $SNPSIFT dbnsfp -db dbNSFP4.0a_hg19.txt.gz -f $(zcat /Volumes/archive/merrimanlab/reference_files/dbNSFP/dbNSFP4.0a/dbNSFP4.0a_hg19.txt.gz | head -1 | tr &#34;\t&#34; &#34;\n&#34; | grep -v &#34;hg18\|hg19\|Geuvadis_eQTL_target_gene&#34; | sed -n 5,&#34;$&#34;p | tr &#34;\n&#34; &#34;\,&#34; |sed &#34;s/,$//g&#34;) myvcf.vcf.gz | bgzip -c &gt; myvcf.dbnsfp.vcf.gz
 </code></pre><h2 id="effect-predictors">Effect predictors</h2>
 <h3 id="snpeff">snpEff</h3>
 <pre tabindex="0"><code>module load snpEff/snpEff_4.3t
@@ -2281,7 +2281,7 @@ java -jar $SNPEFF GRCh37.75 -stats myvcf_stats.html -lof -csvStats myvcf_stats.c
       <div class="lmr">
         
           <p class="caption">
-            ©2021, All Rights Reserved
+            ©2022, All Rights Reserved
           </p>
           
               <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zdoc" rel="noreferrer">zDoc theme</a></p>

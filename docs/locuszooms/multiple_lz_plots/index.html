@@ -14,9 +14,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script>
   "use strict";
@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/locuszooms/multiple_lz_plots/">
@@ -1883,21 +1883,21 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
-<span class="n">output_filenames</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">variants</span><span class="p">,</span> <span class="s">&#34;.jpg&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
-
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">variants</span><span class="p">))</span> <span class="p">{</span>
-	<span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Example.assoc.linear</span><span class="p">,</span>
-			   <span class="n">snp</span> <span class="o">=</span> <span class="n">variants[i]</span><span class="p">,</span>
-			   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
-			   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
-			   <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
-			   <span class="n">file.name</span> <span class="o">=</span> <span class="n">output_filenames[i]</span><span class="p">,</span>
-			   <span class="n">secondary.snp</span> <span class="o">=</span> <span class="n">variants</span><span class="p">,</span>
-			   <span class="n">secondary.label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
-			   <span class="n">ignore.lead</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">output_filenames</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">variants</span><span class="p">,</span> <span class="s">&#34;.jpg&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">variants</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Example.assoc.linear</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">snp</span> <span class="o">=</span> <span class="n">variants[i]</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">file.name</span> <span class="o">=</span> <span class="n">output_filenames[i]</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">secondary.snp</span> <span class="o">=</span> <span class="n">variants</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">secondary.label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">ignore.lead</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Note here that the <code>secondary.snp</code> option has been set to the vector of variants of interest, and the <code>ignore.lead</code> option has been enabled. By passing the vector of interest to the <code>secondary.snp</code> option, it allows <code>locus.zoom()</code> to plot any SNPs of interest within the region of the plot, as well as the SNPs you are interested in.</p>
 <p>In order to make sure the SNP of interest is colored correctly based on its LD, the <code>ignore.lead</code> option has been set. If this option wasn&rsquo;t set, then the LD information of the top SNP in that region would always be used instead of the LD information of the SNP of interest that you wanted.</p>
@@ -1968,34 +1968,34 @@
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#! /bin/bash
-</span><span class="cp"></span>
-<span class="c1"># Script to generate LD of all the lead variants from plink loci output</span>
-<span class="c1"># Usage: bash /path/to/script plink.loci EUR ld_files</span>
-
-<span class="nv">LOCI</span><span class="o">=</span><span class="nv">$1</span>
-<span class="nv">ANCESTRY</span><span class="o">=</span><span class="nv">$2</span>
-<span class="nv">OUTPUT</span><span class="o">=</span><span class="nv">$3</span>
-
-mkdir -p <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ANCESTRY</span><span class="si">}</span>
-
-grep -v <span class="s2">&#34;^</span>$<span class="s2">&#34;</span> <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</span> <span class="p">|</span> tr -s <span class="s1">&#39; &#39;</span> <span class="s1">&#39;\t&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^\t//g&#39;</span> -e <span class="s1">&#39;s/^23/X/g&#39;</span> <span class="p">|</span> cut -f1,3,4 <span class="p">|</span> awk <span class="s1">&#39;NR &gt; 1 {print $2, $1&#34;:&#34;$3 - 500000&#34;-&#34;$3 + 500000}&#39;</span> <span class="p">|</span> tr <span class="s1">&#39; &#39;</span> <span class="s1">&#39;\t&#39;</span> &gt; <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</span>.query
-
-<span class="c1"># Function to generate LD for each lead variant:</span>
-run_ld<span class="o">()</span> <span class="o">{</span>
-	<span class="nv">line</span><span class="o">=</span><span class="nv">$1</span>
-	<span class="nv">ancestry</span><span class="o">=</span><span class="nv">$2</span>
-	<span class="nv">prefix</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>_ <span class="p">|</span> sed <span class="s1">&#39;s/LAT/AMR/g&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/TAMA_/AFR_AMR_EAS_EUR_/g&#39;</span><span class="k">)</span>
-	<span class="nv">rsid</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">line</span><span class="si">}</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f1 <span class="k">)</span>
-	<span class="nv">query</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">line</span><span class="si">}</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f2<span class="k">)</span>
-	<span class="nv">chr</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">query</span><span class="si">}</span> <span class="p">|</span> cut -d <span class="s1">&#39;:&#39;</span> -f1<span class="k">)</span>
-	bcftools view -r <span class="si">${</span><span class="nv">query</span><span class="si">}</span> /Volumes/archive/merrimanlab/reference_files/VCF/1000Genomes_vcf_files/Phase3_March2017/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">prefix</span><span class="si">}</span>chr<span class="si">${</span><span class="nv">chr</span><span class="si">}</span>.*biallelic.vcf.gz -Oz -o <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">rsid</span><span class="si">}</span>.vcf.gz
-	plink1.9b4.9 --vcf <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">rsid</span><span class="si">}</span>.vcf.gz --allow-no-sex --snps-only --r2 inter-chr --ld-snp <span class="si">${</span><span class="nv">rsid</span><span class="si">}</span> --ld-window-r2 <span class="m">0</span> --out <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">rsid</span><span class="si">}</span>
-<span class="o">}</span>
-
-<span class="nb">export</span> -f run_ld
-cat <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</span>.query <span class="p">|</span> parallel run_ld <span class="o">{}</span> <span class="si">${</span><span class="nv">ANCESTRY</span><span class="si">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#! /bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Script to generate LD of all the lead variants from plink loci output</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage: bash /path/to/script plink.loci EUR ld_files</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">LOCI</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ANCESTRY</span><span class="o">=</span><span class="nv">$2</span>
+</span></span><span class="line"><span class="cl"><span class="nv">OUTPUT</span><span class="o">=</span><span class="nv">$3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir -p <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ANCESTRY</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">grep -v <span class="s2">&#34;^</span>$<span class="s2">&#34;</span> <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</span> <span class="p">|</span> tr -s <span class="s1">&#39; &#39;</span> <span class="s1">&#39;\t&#39;</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^\t//g&#39;</span> -e <span class="s1">&#39;s/^23/X/g&#39;</span> <span class="p">|</span> cut -f1,3,4 <span class="p">|</span> awk <span class="s1">&#39;NR &gt; 1 {print $2, $1&#34;:&#34;$3 - 500000&#34;-&#34;$3 + 500000}&#39;</span> <span class="p">|</span> tr <span class="s1">&#39; &#39;</span> <span class="s1">&#39;\t&#39;</span> &gt; <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</span>.query
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Function to generate LD for each lead variant:</span>
+</span></span><span class="line"><span class="cl">run_ld<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">line</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">ancestry</span><span class="o">=</span><span class="nv">$2</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">prefix</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>_ <span class="p">|</span> sed <span class="s1">&#39;s/LAT/AMR/g&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/TAMA_/AFR_AMR_EAS_EUR_/g&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">rsid</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">line</span><span class="si">}</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f1 <span class="k">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">query</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">line</span><span class="si">}</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f2<span class="k">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">chr</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">query</span><span class="si">}</span> <span class="p">|</span> cut -d <span class="s1">&#39;:&#39;</span> -f1<span class="k">)</span>
+</span></span><span class="line"><span class="cl">	bcftools view -r <span class="si">${</span><span class="nv">query</span><span class="si">}</span> /Volumes/archive/merrimanlab/reference_files/VCF/1000Genomes_vcf_files/Phase3_March2017/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">prefix</span><span class="si">}</span>chr<span class="si">${</span><span class="nv">chr</span><span class="si">}</span>.*biallelic.vcf.gz -Oz -o <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">rsid</span><span class="si">}</span>.vcf.gz
+</span></span><span class="line"><span class="cl">	plink1.9b4.9 --vcf <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">rsid</span><span class="si">}</span>.vcf.gz --allow-no-sex --snps-only --r2 inter-chr --ld-snp <span class="si">${</span><span class="nv">rsid</span><span class="si">}</span> --ld-window-r2 <span class="m">0</span> --out <span class="si">${</span><span class="nv">OUTPUT</span><span class="si">}</span>/ld/<span class="si">${</span><span class="nv">ancestry</span><span class="si">}</span>/<span class="si">${</span><span class="nv">rsid</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> -f run_ld
+</span></span><span class="line"><span class="cl">cat <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</span>.query <span class="p">|</span> parallel run_ld <span class="o">{}</span> <span class="si">${</span><span class="nv">ANCESTRY</span><span class="si">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>First four columns of <code>plink</code> loci file are:</p>
 <table>
@@ -2052,28 +2052,28 @@ cat <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</sp
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
-
-<span class="c1"># Import LD info of the variants (you may want to re-write this in purrr, if you want to):</span>
-<span class="n">ld_files</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#39;path/to/ld/ancestry/&#39;</span><span class="p">,</span> <span class="n">variants</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
-<span class="n">ld_files</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">ld_files</span><span class="p">,</span> <span class="s">&#39;.ld&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
-<span class="n">ld_list</span> <span class="o">=</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">ld_files</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">read.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">))</span>
-
-<span class="n">output_filenames</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">variants</span><span class="p">,</span> <span class="s">&#34;.jpg&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
-
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">variants</span><span class="p">))</span> <span class="p">{</span>
-	<span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Example.assoc.linear</span><span class="p">,</span>
-			   <span class="n">snp</span> <span class="o">=</span> <span class="n">variants[i]</span><span class="p">,</span>
-			   <span class="n">ld.file</span> <span class="o">=</span> <span class="n">ld_list[[i]]</span><span class="p">,</span>
-			   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
-			   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
-			   <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
-			   <span class="n">file.name</span> <span class="o">=</span> <span class="n">output_filenames[i]</span><span class="p">,</span>
-			   <span class="n">secondary.snp</span> <span class="o">=</span> <span class="n">variants</span><span class="p">,</span>
-			   <span class="n">secondary.label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
-			   <span class="n">ignore.lead</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">variants</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Import LD info of the variants (you may want to re-write this in purrr, if you want to):</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld_files</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#39;path/to/ld/ancestry/&#39;</span><span class="p">,</span> <span class="n">variants</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld_files</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">ld_files</span><span class="p">,</span> <span class="s">&#39;.ld&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld_list</span> <span class="o">=</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">ld_files</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">read.table</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">output_filenames</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">variants</span><span class="p">,</span> <span class="s">&#34;.jpg&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">variants</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Example.assoc.linear</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">snp</span> <span class="o">=</span> <span class="n">variants[i]</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">ld.file</span> <span class="o">=</span> <span class="n">ld_list[[i]]</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">file.name</span> <span class="o">=</span> <span class="n">output_filenames[i]</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">secondary.snp</span> <span class="o">=</span> <span class="n">variants</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">secondary.label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			   <span class="n">ignore.lead</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now, the above code assumes the LD files are named <code>&lt;rsid&gt;.ld</code>, so if you have made a different LD using a surrogate SNP, then rename the surrogate SNP LD file so it matches up with the rsID of the SNP of interest.</p>
 
@@ -2366,7 +2366,7 @@ cat <span class="si">${</span><span class="nv">LOCI</span><span class="si">}</sp
       <div class="lmr">
         
           <p class="caption">
-            ©2021, All Rights Reserved
+            ©2022, All Rights Reserved
           </p>
           
               <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zdoc" rel="noreferrer">zDoc theme</a></p>

@@ -14,9 +14,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script>
   "use strict";
@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/post/2020-10-19-parallel/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/post/2020-10-19-parallel/">
@@ -1961,13 +1961,11 @@
 <h2 id="basic-usage">Basic usage</h2>
 <p>The basic syntax of a <code>parallel</code> command is:</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
-	parallel &quot;&lt;command&gt; {}&quot; ::: &lt;input&gt;
-
+	parallel &#34;&lt;command&gt; {}&#34; ::: &lt;input&gt;
 </code></pre><p>where <code>&lt;command&gt;</code> is the command you want to run in parallel for all the <code>&lt;input&gt;</code> you provide. The <code>{}</code> represents <strong>where</strong> in the <code>&lt;command&gt;</code> the <code>&lt;input&gt;</code> is substituted.</p>
 <p>For example:</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
-	parallel &quot;echo my name is {}&quot; ::: riku murray tanya ruth mandy
-
+	parallel &#34;echo my name is {}&#34; ::: riku murray tanya ruth mandy
 </code></pre><p>will substitute <code>{}</code> with the names provided after the <code>:::</code>, and output the following (in whichever order parallel will output):</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
 	my name is riku
@@ -1975,27 +1973,23 @@
 	my name is tanya
 	my name is ruth
 	my name is mandy
-
 </code></pre><p>You can use <code>{}</code> as many times as you like:</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
-	parallel &quot;echo {}'s name is {}&quot; ::: riku murray tanya ruth mandy
-
+	parallel &#34;echo {}&#39;s name is {}&#34; ::: riku murray tanya ruth mandy
 </code></pre><p>will output:</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
-	riku's name is riku
-	murray's name is murray
-	tanya's name is tanya
-	ruth's name is ruth
-	mandy's name is mandy
-
+	riku&#39;s name is riku
+	murray&#39;s name is murray
+	tanya&#39;s name is tanya
+	ruth&#39;s name is ruth
+	mandy&#39;s name is mandy
 </code></pre><p>Strictly speaking, quote marks are not necessary, but recommended (by me).</p>
 <h2 id="additional-features">Additional features</h2>
 <h3 id="multiple-inputs">Multiple inputs</h3>
 <p>If you have multiple sets of inputs you want to parallelise, you can add another set of input with <code>::: &lt;input&gt;</code> after the first input, and then use a numbered <code>{}</code> to specify which input you want to use.</p>
 <p>For example:</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
-	parallel &quot;touch {1}_{2}.txt&quot; ::: 1 2 3 ::: A B C
-
+	parallel &#34;touch {1}_{2}.txt&#34; ::: 1 2 3 ::: A B C
 </code></pre><p>will output the following files:</p>
 <pre tabindex="0"><code class="language-{bash" data-lang="{bash">
 	1_A.txt
@@ -2007,13 +2001,11 @@
 	3_A.txt
 	3_B.txt
 	3_C.txt
-
 </code></pre><p>Note that <code>parallel</code> generates all possible combinations from the given inputs.</p>
 <h3 id="xapply-option">xapply option</h3>
 <p>There are situations where you don&rsquo;t want to run the commands for all the combinations from your inputs, but rather run commands for the first item from each input together, then the second item, and so on. For example, <code>echo</code>ing first and last name:</p>
 <pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">
-	parallel &quot;echo {1} {2}&quot; ::: riku murray tanya ::: takei cadzow major
-
+	parallel &#34;echo {1} {2}&#34; ::: riku murray tanya ::: takei cadzow major
 </code></pre><p>This will generate:</p>
 <pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">
 	riku takei
@@ -2025,22 +2017,18 @@
 	tanya takei
 	tanya cadzow
 	tanya major
-
 </code></pre><p>which is not what we want <code>parallel</code> to do, because we want to associate the first item of first input with the first item of second input. To do this correctly, you can supply the <code>--xapply</code> option to <code>parallel</code>:</p>
 <pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">
-	parallel --xapply &quot;echo {1} {2}&quot; ::: riku murray tanya ::: takei cadzow major
-
+	parallel --xapply &#34;echo {1} {2}&#34; ::: riku murray tanya ::: takei cadzow major
 </code></pre><p>which will generate:</p>
 <pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">
 	riku takei
 	murray cadzow
 	tanya major
-
 </code></pre><h3 id="job-control">Job control</h3>
 <p>By default, <code>parallel</code> will use as many cores available on the computer to run the jobs. This may be problematic in situations where you want certain number of cores free for other programs to run, or to prevent the jobs using up all the memory by accident. You can specify the number of jobs to run with <code>-j</code>:</p>
 <pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">
-	parallel -j &lt;N&gt; &quot;&lt;command&gt; {}&quot; ::: &lt;input&gt;
-
+	parallel -j &lt;N&gt; &#34;&lt;command&gt; {}&#34; ::: &lt;input&gt;
 </code></pre><p>The <code>&lt;N&gt;</code> is the number of concurrent jobs you want <code>parallel</code> to run at the same time. Below is a guide on some of the values you can provide to the <code>-j</code> option:</p>
 <table>
 <thead>
@@ -2071,8 +2059,7 @@
 <h3 id="input-manipulation">Input manipulation</h3>
 <p>When you pass file names (with or without absolute paths) to <code>parallel</code>, it is sometimes desirable to edit the file name in order to build outputs based on the input. For example, if you have an <code>input.txt</code> file and want an <code>input.result.txt</code> as an output, you can do the following to achieve this result:</p>
 <pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">
-	parallel &quot;&lt;command&gt; {} &gt; {.}.result.txt&quot; ::: $(ls /path/to/files.txt)
-
+	parallel &#34;&lt;command&gt; {} &gt; {.}.result.txt&#34; ::: $(ls /path/to/files.txt)
 </code></pre><p>The extra <code>.</code> within the <code>{}</code> tells <code>parallel</code> to remove the extension of the input. Since the rest of the path is unchanged, <code>*.result.txt</code> file will appear in the same directory as the input (in this case, <code>/path/to/</code>).</p>
 <p>Here is a table of some of the things you can do to the input line:</p>
 <table>
@@ -2394,7 +2381,7 @@
       <div class="lmr">
         
           <p class="caption">
-            ©2021, All Rights Reserved
+            ©2022, All Rights Reserved
           </p>
           
               <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zdoc" rel="noreferrer">zDoc theme</a></p>

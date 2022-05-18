@@ -14,9 +14,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script>
   "use strict";
@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/locuszooms/generating_single_locus_zooms/">
@@ -1951,9 +1951,9 @@ Therefore, we recommend you to use rsID wherever possible to match with the 1000
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bcftools view -r CHR:START-END /path/to/reference/chr/vcf.gz -Oz -o /path/to/output/tmp.vcf.gz
-plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-chr --ld-snp &lt;rsid-of-interest&gt; --ld-window-r2 <span class="m">0</span> --out /path/to/output/ld_file
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bcftools view -r CHR:START-END /path/to/reference/chr/vcf.gz -Oz -o /path/to/output/tmp.vcf.gz
+</span></span><span class="line"><span class="cl">plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-chr --ld-snp &lt;rsid-of-interest&gt; --ld-window-r2 <span class="m">0</span> --out /path/to/output/ld_file
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>where:</p>
 <table>
@@ -2008,25 +2008,25 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Load necessary files into R</span>
-<span class="n">Example.assoc.linear</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&#34;Example.assoc.linear&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-<span class="n">Example.ld</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#34;Example.ld&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-<span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&#34;Example.genes&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-
-<span class="c1"># Load the locuszoom function into R</span>
-<span class="nf">source</span><span class="p">(</span><span class="s">&#34;functions/locus_zoom.R&#34;</span><span class="p">)</span>
-
-<span class="c1"># Create a LocusZoom-like plot</span>
-<span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Example.assoc.linear</span><span class="p">,</span>
-           <span class="n">region</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">16</span><span class="p">,</span> <span class="m">53340000</span><span class="p">,</span> <span class="m">54550000</span><span class="p">),</span>
-           <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span>
-           <span class="n">ld.file</span> <span class="o">=</span> <span class="n">Example.ld</span><span class="p">,</span>
-           <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
-           <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
-           <span class="n">file.name</span> <span class="o">=</span> <span class="s">&#34;Example.jpg&#34;</span><span class="p">,</span>
-           <span class="n">secondary.snp</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">),</span>
-           <span class="n">secondary.label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Load necessary files into R</span>
+</span></span><span class="line"><span class="cl"><span class="n">Example.assoc.linear</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&#34;Example.assoc.linear&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Example.ld</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#34;Example.ld&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span> <span class="o">&lt;-</span> <span class="nf">read.delim</span><span class="p">(</span><span class="s">&#34;Example.genes&#34;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Load the locuszoom function into R</span>
+</span></span><span class="line"><span class="cl"><span class="nf">source</span><span class="p">(</span><span class="s">&#34;functions/locus_zoom.R&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a LocusZoom-like plot</span>
+</span></span><span class="line"><span class="cl"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">Example.assoc.linear</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">region</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">16</span><span class="p">,</span> <span class="m">53340000</span><span class="p">,</span> <span class="m">54550000</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">           <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">ld.file</span> <span class="o">=</span> <span class="n">Example.ld</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">file.name</span> <span class="o">=</span> <span class="s">&#34;Example.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">secondary.snp</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;rs1121980&#34;</span><span class="p">,</span> <span class="s">&#34;rs8060235&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">           <span class="n">secondary.label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><p class="md__image">
   <img src="/docs/locuszooms/Example.jpg" alt=""  />
@@ -2045,15 +2045,15 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">EUR_meta_full1_clean_rsid.nfiltered_chr7</span><span class="p">,</span>
-           <span class="n">gene</span> <span class="o">=</span> <span class="s">&#34;MLXIPL&#34;</span><span class="p">,</span>
-           <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
-           <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList</span><span class="p">,</span>
-           <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of MLXIPL with gout in Europeans&#34;</span><span class="p">,</span>
-           <span class="n">file.name</span> <span class="o">=</span> <span class="s">&#34;alternateExample.jpg&#34;</span><span class="p">,</span>
-           <span class="n">genes.pvalue</span> <span class="o">=</span> <span class="n">European_GWAS_2020_test.genes_named</span><span class="p">,</span>
-           <span class="n">colour.genes</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">EUR_meta_full1_clean_rsid.nfiltered_chr7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">gene</span> <span class="o">=</span> <span class="s">&#34;MLXIPL&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of MLXIPL with gout in Europeans&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">file.name</span> <span class="o">=</span> <span class="s">&#34;alternateExample.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">genes.pvalue</span> <span class="o">=</span> <span class="n">European_GWAS_2020_test.genes_named</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">colour.genes</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><p class="md__image">
   <img src="/docs/locuszooms/alternateExample.jpg" alt=""  />
@@ -2353,7 +2353,7 @@ plink1.9 --vcf /path/to/output/tmp.vcf.gz --allow-no-sex --snps-only --r2 inter-
       <div class="lmr">
         
           <p class="caption">
-            ©2021, All Rights Reserved
+            ©2022, All Rights Reserved
           </p>
           
               <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zdoc" rel="noreferrer">zDoc theme</a></p>

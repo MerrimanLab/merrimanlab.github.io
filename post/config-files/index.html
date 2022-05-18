@@ -14,9 +14,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script>
   "use strict";
@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/post/config-files/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/post/config-files/">
@@ -1981,12 +1981,12 @@
 </code></pre><p>When I then open R on the server, the value of that variable is then passed and set to the equivalent in R, and R then knows that I want to use <code>pandoc</code> found at that path. This is important because there might be another instance of <code>pandoc</code> that is available on your <em>PATH</em>. <em>RSTUDIO_PANDOC</em> is the name that R has specified to use if you want to customise which <code>pandoc</code> is used.</p>
 <h4 id="better-bash-history">Better bash history</h4>
 <p>Bash records your history as it goes but if you are operating across multiple windows it doesn&rsquo;t work the way you would hope for - e.g. it is only recorded from a single given session, even if you work in multiple. <em>PROMPT_COMMAND</em> is a bash variable that is run as part of running commands. This particular one is designed to time and date stamp commands (not run as root) and their working directory into a daily log file. The logs live in <code>~/.logs/</code> so this needs to be made for the command to run <code>mkdir -p ~/.logs</code>.</p>
-<pre tabindex="0"><code>export PROMPT_COMMAND='if [ &quot;$(id -u)&quot; -ne 0 ]; then echo &quot;$(date &quot;+%Y-%m-%d.%H:%M:%S&quot;) $(pwd) $(history 1)&quot; &gt;&gt; ~/.logs/bash-history-$(date &quot;+%Y-%m-%d&quot;).log; fi'
+<pre tabindex="0"><code>export PROMPT_COMMAND=&#39;if [ &#34;$(id -u)&#34; -ne 0 ]; then echo &#34;$(date &#34;+%Y-%m-%d.%H:%M:%S&#34;) $(pwd) $(history 1)&#34; &gt;&gt; ~/.logs/bash-history-$(date &#34;+%Y-%m-%d&#34;).log; fi&#39;
 </code></pre><p>If I want to search my logs I can use <code>grep &lt;command&gt; ~/.logs/*</code> and it will tell me all the times and directories I ran a command, and how I ran it. The history in these log files is made up of all commands you run on the computer, regardless of how many terminal windows you have open.</p>
 <h3 id="aliases">Aliases</h3>
 <p>Aliases can be quite useful for common commands and arguments you run.</p>
 <p>For instance I have aliases set up to ssh onto the server and connect to a tmux session if one is already running.</p>
-<pre tabindex="0"><code>alias merritmux1='ssh -t biocmerriserver1 tmux attach'
+<pre tabindex="0"><code>alias merritmux1=&#39;ssh -t biocmerriserver1 tmux attach&#39;
 </code></pre><p>This particular one does have to have your ssh config set up so that the details for biocmerriserver</p>
 <p>It&rsquo;s based on the setup that is required for logging into NeSI (<a href="https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup" target="_blank">https://support.nesi.org.nz/hc/en-gb/articles/360000625535-Standard-Terminal-Setup</a>)</p>
 <ol>
@@ -2024,15 +2024,15 @@ Host biochemcompute
 <p>This Rprofile is designed to use the shared libraries on the server.</p>
 <p><strong>Edit the <em>firstname</em> <em>lastname</em> spots</strong></p>
 <pre tabindex="0"><code># set the default cran repository
-options(repos = c(CRAN = &quot;https://cran.stat.auckland.ac.nz/&quot;))
+options(repos = c(CRAN = &#34;https://cran.stat.auckland.ac.nz/&#34;))
 
 # sets the libpath to be the shared directory if using R &gt; v4.0, or personal if &lt; v4.0
 .libPaths(
-    c(paste0(&quot;/Volumes/scratch/merrimanlab/R/x86_64-pc-linux-gnu-library/&quot;,version$major,&quot;.&quot;, strsplit(version$minor, &quot;\\.&quot;)[[1]][1], &quot;/&quot;), # shared merriman library
-    paste0(&quot;~/R/x86_64-&quot;,ifelse(version$major == &quot;4&quot;, &quot;pc&quot;, &quot;redhat&quot;),&quot;-linux-gnu-library/&quot;,version$major,&quot;.&quot;, strsplit(version$minor, &quot;\\.&quot;)[[1]][1],&quot;/&quot;) # personal library
+    c(paste0(&#34;/Volumes/scratch/merrimanlab/R/x86_64-pc-linux-gnu-library/&#34;,version$major,&#34;.&#34;, strsplit(version$minor, &#34;\\.&#34;)[[1]][1], &#34;/&#34;), # shared merriman library
+    paste0(&#34;~/R/x86_64-&#34;,ifelse(version$major == &#34;4&#34;, &#34;pc&#34;, &#34;redhat&#34;),&#34;-linux-gnu-library/&#34;,version$major,&#34;.&#34;, strsplit(version$minor, &#34;\\.&#34;)[[1]][1],&#34;/&#34;) # personal library
 )) 
 
-# load 'helper' packages automatically if running 
+# load &#39;helper&#39; packages automatically if running 
 # an interactive session - i.e. not a script
 if (interactive()) {
   suppressMessages(require(devtools))
@@ -2049,21 +2049,20 @@ options(
 )
 
 # fancy quotes are annoying and lead to
-# 'copy + paste' bugs / frustrations
+# &#39;copy + paste&#39; bugs / frustrations
 options(useFancyQuotes = FALSE)
 
 # set some author info that packages use
-options(&quot;devtools.desc&quot; = list(
-  Author = &quot;firstname lastname&quot;,
-  Maintainer = paste0(&quot;firstname lastname&quot;, &quot; &lt;&quot;, &quot;email address&quot;, &quot;&gt;&quot;),
-  License = &quot;MIT + file LICENSE&quot;,
-  Version = &quot;0.0.1&quot;
+options(&#34;devtools.desc&#34; = list(
+  Author = &#34;firstname lastname&#34;,
+  Maintainer = paste0(&#34;firstname lastname&#34;, &#34; &lt;&#34;, &#34;email address&#34;, &#34;&gt;&#34;),
+  License = &#34;MIT + file LICENSE&#34;,
+  Version = &#34;0.0.1&#34;
 ))
-options(&quot;devtools.name&quot; = &quot;firstname lastname&quot;)
+options(&#34;devtools.name&#34; = &#34;firstname lastname&#34;)
 
 # use more cores if possible installing packages
 options(Ncpus = 8)
-
 </code></pre><h2 id="libraries">Libraries</h2>
 <p>In general you want to avoid calling libraries that are involved in analyses because this can alter how reproducible your code would be if you passed it to someone else that didn&rsquo;t have your <code>.Rprofile</code> - e.g. don&rsquo;t have <code>library(tidyverse)</code> in you <code>.Rprofile</code>. It can be useful to automatically load helper packages such as <code>devtools</code> and <code>usethis</code> since they aren&rsquo;t used for analysis but are extremely helpful to have loaded when you want to set things up.</p>
 
@@ -2367,7 +2366,7 @@ options(Ncpus = 8)
       <div class="lmr">
         
           <p class="caption">
-            ©2021, All Rights Reserved
+            ©2022, All Rights Reserved
           </p>
           
               <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zdoc" rel="noreferrer">zDoc theme</a></p>

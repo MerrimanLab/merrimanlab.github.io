@@ -14,9 +14,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script>
   "use strict";
@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://merrimanlab.github.io/docs/locuszooms/multi_pane_lz/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://merrimanlab.github.io/docs/locuszooms/multi_pane_lz/">
@@ -1871,11 +1871,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">data1</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data1.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
-<span class="n">data2</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data2.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
-
-<span class="n">all_data</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">data1</span> <span class="o">=</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">data1</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data1.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">data2</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;path/to/data2.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">all_data</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">data1</span> <span class="o">=</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The names of the data sets in the list are optional, but it will be used to label the panes so it is recommended to name them appropriately.</p>
 <p>Make sure all summary data in the list has the required columns and in the right format.</p>
@@ -1892,14 +1892,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">,</span>
-	   <span class="n">snp</span> <span class="o">=</span> <span class="s">&#34;rs1121980&#34;</span><span class="p">,</span>
-	   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
-	   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
-	   <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
-	   <span class="n">file.name</span> <span class="o">=</span> <span class="s">&#34;rs1121980.jpg&#34;</span><span class="p">,</span>
-	   <span class="n">nplots</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">locus.zoom</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">snp</span> <span class="o">=</span> <span class="s">&#34;rs1121980&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">offset_bp</span> <span class="o">=</span> <span class="m">500000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">genes.data</span> <span class="o">=</span> <span class="n">UCSC_GRCh37_Genes_UniqueList.txt</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">plot.title</span> <span class="o">=</span> <span class="s">&#34;Association of FTO with BMI in Europeans&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">file.name</span> <span class="o">=</span> <span class="s">&#34;rs1121980.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">nplots</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>The <code>locus.zoom()</code> function will pull out the relevant region from each of the summary data sets (assuming the region is present in both data sets) and plot it on top of each other.</p>
 <h2 id="key-implementation-details">Key implementation details</h2>
@@ -2205,7 +2205,7 @@
       <div class="lmr">
         
           <p class="caption">
-            ©2021, All Rights Reserved
+            ©2022, All Rights Reserved
           </p>
           
               <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zdoc" rel="noreferrer">zDoc theme</a></p>
