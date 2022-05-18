@@ -23,21 +23,15 @@ Professor Tony Merriman:
 ## Staff members
 
 - Marilyn Merriman
-- [Mandy Phipps-Green]()
-  - [Github](https://github.com/mandyphippsgreen)
-- [Ruth Topless]()
-  - [Github](https://github.com/ruthtopless)
-- [Riku Takei]()
-  - [Github](https://github.com/rikutakei)
-- [Dr Murray Cadzow](https://www.otago.ac.nz/healthsciences/expertise/profile/index.html?id=3137)
-  - [Github](https://github.com/murraycadzow)
+- Ruth Topless
+- Riku Takei
+
 
 
 
 ## Research Fellows
 
 - [Dr Megan Leask](https://www.otago.ac.nz/biochemistry/people/profile/index.html?id=2087)
-  - Github
 - [Dr Tanya Major](https://www.otago.ac.nz/biochemistry/people/profile/index.html?id=2639)
   - [Github](https://github.com/geeketics)
 - [Dr Anna Gosling](https://www.otago.ac.nz/bms/expertise/profile/index.html?id=2947)
@@ -60,6 +54,8 @@ Professor Tony Merriman:
 
 ## Past members
 
+- Mandy Phipps-Green (Staff)
+- Murray Cadzow(Staff)
 - Ashleigh Frewen (Staff)
 - Matt Bixley (Staff)
 - Edana Lord (Staff)
@@ -68,4 +64,4 @@ Professor Tony Merriman:
 - Hakimeh Azimi (MSc student)
 - Tahzeeb Fatima Awais (PhD student)
 - Humaira Rasheed (PhD Student)
-- [Amara Shaukat](https://github.com/Amara-Shaukat) (PhD Student)
+- Amara Shaukat (PhD Student)
